@@ -1,0 +1,80 @@
+{
+  "format": 1,
+  "restore": {
+    "S:\\Schule\\3chel\\FSST\\_project\\OpenDelivery\\src\\OpenDelivery\\OpenDelivery.csproj": {}
+  },
+  "projects": {
+    "S:\\Schule\\3chel\\FSST\\_project\\OpenDelivery\\src\\OpenDelivery\\OpenDelivery.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "S:\\Schule\\3chel\\FSST\\_project\\OpenDelivery\\src\\OpenDelivery\\OpenDelivery.csproj",
+        "projectName": "OpenDelivery",
+        "projectPath": "S:\\Schule\\3chel\\FSST\\_project\\OpenDelivery\\src\\OpenDelivery\\OpenDelivery.csproj",
+        "packagesPath": "C:\\Users\\jakob\\.nuget\\packages\\",
+        "outputPath": "S:\\Schule\\3chel\\FSST\\_project\\OpenDelivery\\src\\OpenDelivery\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\jakob\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "uap10.0.16299"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/discord-net/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "uap10.0.16299": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "uap10.0.16299": {
+          "dependencies": {
+            "Microsoft.NETCore.UniversalWindowsPlatform": {
+              "target": "Package",
+              "version": "[6.2.13, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      },
+      "runtimes": {
+        "win10-arm": {
+          "#import": []
+        },
+        "win10-arm-aot": {
+          "#import": []
+        },
+        "win10-arm64-aot": {
+          "#import": []
+        },
+        "win10-x64": {
+          "#import": []
+        },
+        "win10-x64-aot": {
+          "#import": []
+        },
+        "win10-x86": {
+          "#import": []
+        },
+        "win10-x86-aot": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
