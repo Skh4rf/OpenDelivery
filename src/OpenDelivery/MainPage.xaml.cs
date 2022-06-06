@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Threading;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -25,6 +26,20 @@ namespace OpenDelivery
         public MainPage()
         {
             this.InitializeComponent();
+            
         }
+
+        #region Initialisierung
+
+
+        #endregion
+       
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MapPage));
+        }
+
     }
+
+
 }
