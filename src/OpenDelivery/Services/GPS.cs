@@ -5,11 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Devices.Geolocation;
 using Windows.ApplicationModel.Core;
+using Windows.Services.Maps;
 
 namespace OpenDelivery.Services
 {
     public class GPS
     {
+        #region initialization
         private Geolocator _geolocator;
 
         public event EventHandler<Geoposition> OnPositionChanged;
@@ -55,7 +57,9 @@ namespace OpenDelivery.Services
 
             return result;
         }
+        #endregion initialization
 
+        #region positiondetection
         public async Task StartListeningAsnyc() // Automatische Standortabfrage aktivieren
         {
             if (_geolocator == null) { await InitializeAsync(); }
@@ -83,5 +87,24 @@ namespace OpenDelivery.Services
                 OnPositionChanged?.Invoke(this, CurrentPosition);
             });
         }
+        #endregion positiondetection
+
+        #region routecalculation
+
+        public async Task<MapRouteFinderResult> CalculateRoute(Geopoint destination)
+        {
+            // Aktueller Standort ermitteln
+            if (_geolocator == null) { await InitializeAsync(); }
+            CurrentPosition = await _geolocator.GetGeopositionAsync();
+            //Exception potential
+            return await MapRouteFinder.GetDrivingRouteAsync(
+                    new Geopoint(CurrentPosition.Coordinate.Point.Position),
+                    destination,
+                    MapRouteOptimization.Time,
+                    MapRouteRestrictions.None);
+        }
+        
+
+        #endregion routecalculation
     }
 }

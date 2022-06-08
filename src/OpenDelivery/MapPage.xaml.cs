@@ -23,7 +23,7 @@ namespace OpenDelivery
 {
     public sealed partial class MapPage : Page
     {
-        private const double DefaultZoomLevel = 15;
+        private const double DefaultZoomLevel = 17;
 
         private readonly GPS _gpsService;
 
