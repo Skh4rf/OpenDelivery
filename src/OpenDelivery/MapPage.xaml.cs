@@ -78,6 +78,11 @@ namespace OpenDelivery
             await InitializeAsync(mapControl);
         }
 
+        public async void ManuelInitialization()
+        {
+            await InitializeAsync(mapControl);
+        }
+
         private async void LoadRoute(Geopoint destination, MapRouteOptimization optimization = MapRouteOptimization.Time, MapRouteRestrictions restrictions = MapRouteRestrictions.None)
         {
             await _gpsService.CalculateRouteAsync(destination, optimization, restrictions);
@@ -111,6 +116,11 @@ namespace OpenDelivery
             test.Latitude = 47.443485;
             test.Longitude = 9.735536;
             LoadRoute(new Geopoint(test));
+        }
+
+        private void Page_GotFocus(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

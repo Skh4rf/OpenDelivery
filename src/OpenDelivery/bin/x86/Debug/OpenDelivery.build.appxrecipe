@@ -91,11 +91,20 @@
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\CustomerPage.xbf">
+      <PackagePath>CustomerPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\InvoicePage.xbf">
+      <PackagePath>InvoicePage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\MapPage.xbf">
       <PackagePath>MapPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\RoutePage.xbf">
+      <PackagePath>RoutePage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>

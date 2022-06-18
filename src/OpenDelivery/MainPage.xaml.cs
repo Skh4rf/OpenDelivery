@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Threading;
+using System.Threading.Tasks;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -23,6 +24,11 @@ namespace OpenDelivery
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private MapPage mapPage;
+        private RoutePage routePage = new RoutePage();
+        private CustomerPage customerPage = new CustomerPage();
+        private InvoicePage invoicePage = new InvoicePage();
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -36,11 +42,31 @@ namespace OpenDelivery
 
         private void AppBarButtonMap_Click(object sender, RoutedEventArgs e)
         {
-            MapPage mapPage = new MapPage();
-            this.Main.Children.Add(mapPage);
-            Grid.SetColumn(mapPage, 1);
+            if (mapPage == null)
+            {
+                mapPage = new MapPage();
+                mapPage.ManuelInitialization();
+            }
+            this.CurrentPageView.Children.Clear();
+            this.CurrentPageView.Children.Add(mapPage);
+        }
+
+        private void AppBarButtonRouten_Click(object sender, RoutedEventArgs e)
+        {
+            this.CurrentPageView.Children.Clear();
+            this.CurrentPageView.Children.Add(routePage);
+        }
+
+        private void AppBarButtonKunden_Click(object sender, RoutedEventArgs e)
+        {
+            this.CurrentPageView.Children.Clear();
+            this.CurrentPageView.Children.Add(customerPage);
+        }
+
+        private void AppBarRechnung_Click(object sender, RoutedEventArgs e)
+        {
+            this.CurrentPageView.Children.Clear();
+            this.CurrentPageView.Children.Add(invoicePage);
         }
     }
-
-
 }

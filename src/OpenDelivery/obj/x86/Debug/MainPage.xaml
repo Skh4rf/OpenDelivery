@@ -15,18 +15,20 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Column="0">
-            <Image x:ConnectionId='8' Name="Logo" Grid.Column="0" Source="ms-appx:///Icons/Logo_white.png" Height="100" HorizontalAlignment="Center" Margin="0,20,0,0"/>
-            <AppBarButton x:ConnectionId='9' Name="AppBarButtonRouten" Content="Routen" Width="{Binding ElementName=Nav, Path=ActualWidth}" FontSize="20" Margin="0,50,0,0"/>
-            <AppBarButton x:ConnectionId='10' Name="AppBarButtonKunden" Content="Kunden" Width="{Binding ElementName=Nav, Path=ActualWidth}" FontSize="20"/>
-            <AppBarButton x:ConnectionId='11' Name="AppBarButtonMap" Content="Map" Width="{Binding ElementName=Nav, Path=ActualWidth}" FontSize="20"                              />
-            <AppBarButton x:ConnectionId='12' Name="AppBarRechnung" Content="Rechnung" Width="{Binding ElementName=Nav, Path=ActualWidth}" FontSize="20"/>
+            <Image x:ConnectionId='9' Name="Logo" Grid.Column="0" Source="ms-appx:///Icons/Logo_white.png" Height="100" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+            <AppBarButton x:ConnectionId='10' Name="AppBarButtonRouten" Content="Routen" Width="{Binding ElementName=Nav, Path=ActualWidth}" FontSize="20" Margin="0,50,0,0"                                 />
+            <AppBarButton x:ConnectionId='11' Name="AppBarButtonKunden" Content="Kunden" Width="{Binding ElementName=Nav, Path=ActualWidth}" FontSize="20"                                 />
+            <AppBarButton x:ConnectionId='12' Name="AppBarButtonMap" Content="Map" Width="{Binding ElementName=Nav, Path=ActualWidth}" FontSize="20"                              />
+            <AppBarButton x:ConnectionId='13' Name="AppBarRechnung" Content="Rechnung" Width="{Binding ElementName=Nav, Path=ActualWidth}" FontSize="20"                             />
         </StackPanel>
         <AppBarButton x:ConnectionId='5' Grid.Column="0" Name="AppBarButtonSettings" Content="Settings" Width="{Binding ElementName=Nav, Path=ActualWidth}" FontSize="20" VerticalAlignment="Bottom"/>
 
-        <StackPanel Grid.Column="1" VerticalAlignment="Center">
-            <TextBlock x:ConnectionId='6' Name="TextBlockWelcome" Text="Welcome to OpenDelivery," HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72"/>
-            <TextBlock x:ConnectionId='7' Name="TextBlockWelcome2" Text="have a good ride!" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72"/>
-        </StackPanel>
+        <Grid x:ConnectionId='6' Name="CurrentPageView" Grid.Column="1">
+            <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                <TextBlock x:ConnectionId='7' Name="TextBlockWelcome" Text="Welcome to OpenDelivery," HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72"/>
+                <TextBlock x:ConnectionId='8' Name="TextBlockWelcome2" Text="have a good ride!" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72"/>
+            </StackPanel>
+        </Grid>
         
         
     </Grid>

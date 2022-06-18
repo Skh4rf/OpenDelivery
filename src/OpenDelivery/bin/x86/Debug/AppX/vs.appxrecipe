@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>D2196058AFBD10338C8C6FBA77BBF04829F9B15CBCBC31B0648C44E0E2229D2B</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>43CD278C51298A986D9523A69E636014D02E43816E7CBF13E05476081063396F</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>2a5f69ef-8da5-451c-8be0-27646d473913_1.0.0.0_x86__7hvry3s791mnm</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>2a5f69ef-8da5-451c-8be0-27646d473913_7hvry3s791mnm!App</RegisteredUserModeAppID>
     <RegisteredPackageID>2a5f69ef-8da5-451c-8be0-27646d473913</RegisteredPackageID>
@@ -30,13 +30,13 @@
     <AppXManifest Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-06-18T14:29:21.815</Modified>
+      <Modified>2022-06-18T17:15:12.095</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\OpenDelivery.exe">
       <PackagePath>entrypoint\OpenDelivery.exe</PackagePath>
-      <Modified>2022-06-18T14:29:21.169</Modified>
+      <Modified>2022-06-18T17:15:11.025</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.13\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -114,19 +114,31 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\OpenDelivery.xr.xml">
       <PackagePath>OpenDelivery.xr.xml</PackagePath>
-      <Modified>2022-06-18T14:23:29.162</Modified>
+      <Modified>2022-06-18T17:15:10.886</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-06-18T14:29:21.105</Modified>
+      <Modified>2022-06-18T17:15:10.894</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\CustomerPage.xbf">
+      <PackagePath>CustomerPage.xbf</PackagePath>
+      <Modified>2022-06-18T17:15:10.895</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\InvoicePage.xbf">
+      <PackagePath>InvoicePage.xbf</PackagePath>
+      <Modified>2022-06-18T17:15:10.895</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-06-18T14:29:21.105</Modified>
+      <Modified>2022-06-18T17:15:10.895</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\MapPage.xbf">
       <PackagePath>MapPage.xbf</PackagePath>
-      <Modified>2022-06-18T14:29:21.105</Modified>
+      <Modified>2022-06-18T17:15:10.895</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\RoutePage.xbf">
+      <PackagePath>RoutePage.xbf</PackagePath>
+      <Modified>2022-06-18T17:15:10.895</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -134,11 +146,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-06-15T06:49:13.087</Modified>
+      <Modified>2022-06-18T17:15:11.555</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\Core\OpenDelivery.exe">
       <PackagePath>OpenDelivery.exe</PackagePath>
-      <Modified>2022-06-18T14:29:21.812</Modified>
+      <Modified>2022-06-18T17:15:12.090</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
