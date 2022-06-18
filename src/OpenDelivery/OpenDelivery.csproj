@@ -137,6 +137,7 @@
     <Content Include="Icons\End_sign.png" />
     <Content Include="Icons\Sharp_left.png" />
     <Content Include="Icons\Sharp_right.png" />
+    <Content Include="Icons\Logo_white.png" />
     <Content Include="Icons\Straight_arrow.png" />
     <Content Include="Icons\Turn_left.png" />
     <Content Include="Icons\Turn_right.png" />

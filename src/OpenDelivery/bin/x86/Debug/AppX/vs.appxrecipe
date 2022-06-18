@@ -30,13 +30,13 @@
     <AppXManifest Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-06-06T23:09:48.566</Modified>
+      <Modified>2022-06-18T14:29:21.815</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\OpenDelivery.exe">
       <PackagePath>entrypoint\OpenDelivery.exe</PackagePath>
-      <Modified>2022-06-06T23:09:47.906</Modified>
+      <Modified>2022-06-18T14:29:21.169</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.13\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -57,6 +57,10 @@
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\Icons\Sharp_right.png">
       <PackagePath>Icons\Sharp_right.png</PackagePath>
       <Modified>2022-06-01T06:25:11.825</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\Icons\Logo_white.png">
+      <PackagePath>Icons\Logo_white.png</PackagePath>
+      <Modified>2022-06-15T06:51:23.292</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\Icons\Straight_arrow.png">
       <PackagePath>Icons\Straight_arrow.png</PackagePath>
@@ -110,19 +114,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\OpenDelivery.xr.xml">
       <PackagePath>OpenDelivery.xr.xml</PackagePath>
-      <Modified>2022-06-06T23:09:47.840</Modified>
+      <Modified>2022-06-18T14:23:29.162</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-06-06T23:09:47.845</Modified>
+      <Modified>2022-06-18T14:29:21.105</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-06-06T23:09:47.845</Modified>
+      <Modified>2022-06-18T14:29:21.105</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\MapPage.xbf">
       <PackagePath>MapPage.xbf</PackagePath>
-      <Modified>2022-06-06T23:09:47.845</Modified>
+      <Modified>2022-06-18T14:29:21.105</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -130,11 +134,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-06-06T21:40:55.788</Modified>
+      <Modified>2022-06-15T06:49:13.087</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\Core\OpenDelivery.exe">
       <PackagePath>OpenDelivery.exe</PackagePath>
-      <Modified>2022-06-06T23:09:48.561</Modified>
+      <Modified>2022-06-18T14:29:21.812</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

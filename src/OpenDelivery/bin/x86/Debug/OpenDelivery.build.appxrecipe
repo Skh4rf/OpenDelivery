@@ -43,6 +43,9 @@
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\Icons\Sharp_right.png">
       <PackagePath>Icons\Sharp_right.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\Icons\Logo_white.png">
+      <PackagePath>Icons\Logo_white.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\Icons\Straight_arrow.png">
       <PackagePath>Icons\Straight_arrow.png</PackagePath>
     </AppxPackagedFile>

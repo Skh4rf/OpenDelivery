@@ -8,9 +8,26 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <TextBlock x:ConnectionId='2' Name="TextBoxTest" HorizontalAlignment="Left" Height="228" Margin="242,272,0,0" TextWrapping="Wrap" Text="asdf" VerticalAlignment="Top" Width="562"/>
-        <Button x:ConnectionId='3' Content="Button" Margin="405,671,0,0" VerticalAlignment="Top"                     />
+    <Grid x:ConnectionId='2' Name="Main">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:ConnectionId='3' x:Name="Nav" Width="250"/>
+            <ColumnDefinition x:ConnectionId='4' x:Name="CurrentPage"  Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0">
+            <Image x:ConnectionId='8' Name="Logo" Grid.Column="0" Source="ms-appx:///Icons/Logo_white.png" Height="100" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+            <AppBarButton x:ConnectionId='9' Name="AppBarButtonRouten" Content="Routen" Width="{Binding ElementName=Nav, Path=ActualWidth}" FontSize="20" Margin="0,50,0,0"/>
+            <AppBarButton x:ConnectionId='10' Name="AppBarButtonKunden" Content="Kunden" Width="{Binding ElementName=Nav, Path=ActualWidth}" FontSize="20"/>
+            <AppBarButton x:ConnectionId='11' Name="AppBarButtonMap" Content="Map" Width="{Binding ElementName=Nav, Path=ActualWidth}" FontSize="20"                              />
+            <AppBarButton x:ConnectionId='12' Name="AppBarRechnung" Content="Rechnung" Width="{Binding ElementName=Nav, Path=ActualWidth}" FontSize="20"/>
+        </StackPanel>
+        <AppBarButton x:ConnectionId='5' Grid.Column="0" Name="AppBarButtonSettings" Content="Settings" Width="{Binding ElementName=Nav, Path=ActualWidth}" FontSize="20" VerticalAlignment="Bottom"/>
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+            <TextBlock x:ConnectionId='6' Name="TextBlockWelcome" Text="Welcome to OpenDelivery," HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72"/>
+            <TextBlock x:ConnectionId='7' Name="TextBlockWelcome2" Text="have a good ride!" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72"/>
+        </StackPanel>
+        
         
     </Grid>
     

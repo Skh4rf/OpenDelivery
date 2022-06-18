@@ -12,7 +12,9 @@
     <Grid>
         <maps:MapControl x:ConnectionId='2'
             x:Name="mapControl"
-                                                        />
+                                                        >
+            <Button x:ConnectionId='3' Name="ButtonTest" Content="Button" VerticalAlignment="Top"                         />
+        </maps:MapControl>
     </Grid>
 </Page>
 

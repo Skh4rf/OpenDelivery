@@ -11,11 +11,13 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI;
 using Windows.UI.Xaml.Navigation;
 using OpenDelivery.Services;
 using Windows.Devices.Geolocation;
 using Windows.UI.Xaml.Controls.Maps;
 using System.Threading.Tasks;
+using Windows.Services.Maps;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -76,6 +78,39 @@ namespace OpenDelivery
             await InitializeAsync(mapControl);
         }
 
+        private async void LoadRoute(Geopoint destination, MapRouteOptimization optimization = MapRouteOptimization.Time, MapRouteRestrictions restrictions = MapRouteRestrictions.None)
+        {
+            await _gpsService.CalculateRouteAsync(destination, optimization, restrictions);
 
+            if (_gpsService.Route.Status == MapRouteFinderStatus.Success)
+            {
+                MapRouteView viewOfRoute = new MapRouteView(_gpsService.Route.Route);
+                viewOfRoute.RouteColor = Colors.DarkMagenta;
+                viewOfRoute.OutlineColor = Colors.DarkMagenta;
+
+                mapControl.Routes.Add(viewOfRoute);
+
+                await mapControl.TrySetViewBoundsAsync(
+                      _gpsService.Route.Route.BoundingBox,
+                      null,
+                      MapAnimationKind.Bow);
+                await mapControl.TrySetViewAsync(_gpsService.Route.Route.Legs[0].Maneuvers[0].StartingPoint, 20);
+
+                mapControl.Heading = _gpsService.Route.Route.Legs[0].Maneuvers[0].StartHeading;
+                await mapControl.TryTiltAsync(45);
+            }
+            else
+            {
+                throw new Exception("Could not calculate a route!");
+            }
+        }
+
+        private void ButtonTest_Click(object sender, RoutedEventArgs e)
+        {
+            BasicGeoposition test = new BasicGeoposition();
+            test.Latitude = 47.443485;
+            test.Longitude = 9.735536;
+            LoadRoute(new Geopoint(test));
+        }
     }
 }

@@ -18,6 +18,8 @@ namespace OpenDelivery.Services
 
         public Geoposition CurrentPosition { get; set; }
 
+        public MapRouteFinderResult Route { get; set; }
+
         //Aufbau eines Call-Tree zur Ermittlung der Position unter berücksichtigung verschiedener Parameter --> modularität
         public Task<bool> InitializeAsync() { return InitializeAsync(50); } 
 
@@ -91,19 +93,18 @@ namespace OpenDelivery.Services
 
         #region routecalculation
 
-        public async Task<MapRouteFinderResult> CalculateRoute(Geopoint destination)
+        public async Task CalculateRouteAsync(Geopoint destination, MapRouteOptimization optimization, MapRouteRestrictions restrictions)
         {
             // Aktueller Standort ermitteln
             if (_geolocator == null) { await InitializeAsync(); }
             CurrentPosition = await _geolocator.GetGeopositionAsync();
             //Exception potential
-            return await MapRouteFinder.GetDrivingRouteAsync(
+            Route = await MapRouteFinder.GetDrivingRouteAsync(
                     new Geopoint(CurrentPosition.Coordinate.Point.Position),
                     destination,
-                    MapRouteOptimization.Time,
-                    MapRouteRestrictions.None);
+                    optimization,
+                    restrictions);
         }
-        
 
         #endregion routecalculation
     }

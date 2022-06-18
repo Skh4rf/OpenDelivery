@@ -12,6 +12,8 @@
     <Grid>
         <maps:MapControl
             x:Name="mapControl"
-            ZoomLevel="{x:Bind ZoomLevel, Mode=OneWay}" />
+            ZoomLevel="{x:Bind ZoomLevel, Mode=OneWay}" >
+            <Button Name="ButtonTest" Content="Button" VerticalAlignment="Top" Click="ButtonTest_Click"/>
+        </maps:MapControl>
     </Grid>
 </Page>

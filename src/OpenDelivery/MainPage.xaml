@@ -8,9 +8,26 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <TextBlock Name="TextBoxTest" HorizontalAlignment="Left" Height="228" Margin="242,272,0,0" TextWrapping="Wrap" Text="asdf" VerticalAlignment="Top" Width="562"/>
-        <Button Content="Button" Margin="405,671,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+    <Grid Name="Main">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="Nav" Width="250"/>
+            <ColumnDefinition x:Name="CurrentPage"  Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0">
+            <Image Name="Logo" Grid.Column="0" Source="ms-appx:///Icons/Logo_white.png" Height="100" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+            <AppBarButton Name="AppBarButtonRouten" Content="Routen" Width="{Binding ElementName=Nav, Path=ActualWidth}" FontSize="20" Margin="0,50,0,0"/>
+            <AppBarButton Name="AppBarButtonKunden" Content="Kunden" Width="{Binding ElementName=Nav, Path=ActualWidth}" FontSize="20"/>
+            <AppBarButton Name="AppBarButtonMap" Content="Map" Width="{Binding ElementName=Nav, Path=ActualWidth}" FontSize="20" Click="AppBarButtonMap_Click"/>
+            <AppBarButton Name="AppBarRechnung" Content="Rechnung" Width="{Binding ElementName=Nav, Path=ActualWidth}" FontSize="20"/>
+        </StackPanel>
+        <AppBarButton Grid.Column="0" Name="AppBarButtonSettings" Content="Settings" Width="{Binding ElementName=Nav, Path=ActualWidth}" FontSize="20" VerticalAlignment="Bottom"/>
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+            <TextBlock Name="TextBlockWelcome" Text="Welcome to OpenDelivery," HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72"/>
+            <TextBlock Name="TextBlockWelcome2" Text="have a good ride!" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72"/>
+        </StackPanel>
+        
         
     </Grid>
     

@@ -33,12 +33,13 @@ namespace OpenDelivery
 
 
         #endregion
-       
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(MapPage));
-        }
 
+        private void AppBarButtonMap_Click(object sender, RoutedEventArgs e)
+        {
+            MapPage mapPage = new MapPage();
+            this.Main.Children.Add(mapPage);
+            Grid.SetColumn(mapPage, 1);
+        }
     }
 
 
