@@ -12,7 +12,8 @@
     <Grid>
         <maps:MapControl x:ConnectionId='2'
             x:Name="mapControl"
-                                                        >
+                                                       
+            MapServiceToken="Pky3dJmtZJWx7Kr9IKem~M_P1CdRB4SOQli4yFCuMQA~AoPYCgx-b69mVmWu5TzBWL_QlR_7wSE7kDptI0DzIjxJOTMDd8EBdE75gAqLgx6M">
             <Button x:ConnectionId='3' Name="ButtonTest" Content="Button" VerticalAlignment="Top"                         />
         </maps:MapControl>
     </Grid>

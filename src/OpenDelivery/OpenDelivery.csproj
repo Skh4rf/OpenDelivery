@@ -119,6 +119,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomerData\Address.cs" />
+    <Compile Include="CustomerData\Customer.cs" />
     <Compile Include="CustomerPage.xaml.cs">
       <DependentUpon>CustomerPage.xaml</DependentUpon>
     </Compile>
@@ -134,6 +136,7 @@
     <Compile Include="RoutePage.xaml.cs">
       <DependentUpon>RoutePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Services\Database.cs" />
     <Compile Include="Services\GPS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -188,6 +191,9 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.13</Version>
+    </PackageReference>
+    <PackageReference Include="MySqlConnector">
+      <Version>2.1.10</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
