@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenDelivery.CustomerData
+namespace OpenDelivery.LocalData
 {
     internal class Customer
     {

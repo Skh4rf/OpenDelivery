@@ -119,14 +119,17 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CustomerData\Address.cs" />
-    <Compile Include="CustomerData\Customer.cs" />
+    <Compile Include="LocalData\Address.cs" />
+    <Compile Include="LocalData\Bestellung.cs" />
+    <Compile Include="LocalData\Customer.cs" />
     <Compile Include="CustomerPage.xaml.cs">
       <DependentUpon>CustomerPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="InvoicePage.xaml.cs">
       <DependentUpon>InvoicePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LocalData\Produkt.cs" />
+    <Compile Include="LocalData\Route.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
