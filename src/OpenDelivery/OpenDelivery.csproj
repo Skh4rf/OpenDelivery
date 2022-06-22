@@ -140,6 +140,7 @@
       <DependentUpon>RoutePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Services\Database.cs" />
+    <Compile Include="Services\Geocoding.cs" />
     <Compile Include="Services\GPS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
