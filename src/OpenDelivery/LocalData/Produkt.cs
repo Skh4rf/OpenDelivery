@@ -8,9 +8,9 @@ namespace OpenDelivery.LocalData
 {
     internal class Produkt
     {
-        public string Name { get; private set; }
-        public string Einheit { get; private set; }
-        public double Menge { get; private set; }
+        public int Artikelnummer { get; set; }
+        public string Name { get; set; }
+        public string Einheit { get; set; }
 
         public Produkt() { }
     }

@@ -119,9 +119,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LocalData\Address.cs" />
+    <Compile Include="LocalData\Adresse.cs" />
     <Compile Include="LocalData\Bestellung.cs" />
-    <Compile Include="LocalData\Customer.cs" />
+    <Compile Include="LocalData\Koordinate.cs" />
+    <Compile Include="LocalData\Kunde.cs" />
     <Compile Include="CustomerPage.xaml.cs">
       <DependentUpon>CustomerPage.xaml</DependentUpon>
     </Compile>
@@ -129,6 +130,7 @@
       <DependentUpon>InvoicePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="LocalData\Produkt.cs" />
+    <Compile Include="LocalData\BestelltesProdukt.cs" />
     <Compile Include="LocalData\Route.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>

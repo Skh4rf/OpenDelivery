@@ -8,9 +8,11 @@ namespace OpenDelivery.LocalData
 {
     internal class Bestellung
     {
-        public Customer Customer { get; private set; }
-        public List<Produkt> Produkt { get; private set; }
+        public int Bestellnummer { get; set; }
+        public List<BestelltesProdukt> Produkte { get; set; }
+        public Kunde kunde;
+        public Route route;
 
-        public Bestellung() { Produkt = new List<Produkt>(); }
+        public Bestellung() { Produkte = new List<BestelltesProdukt>(); }
     }
 }
