@@ -30,13 +30,13 @@
     <AppXManifest Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-06-21T16:13:27.215</Modified>
+      <Modified>2022-06-22T07:39:18.694</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\OpenDelivery.exe">
       <PackagePath>entrypoint\OpenDelivery.exe</PackagePath>
-      <Modified>2022-06-21T16:13:25.486</Modified>
+      <Modified>2022-06-22T07:39:17.148</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jakob\.nuget\packages\mysqlconnector\2.1.10\lib\netstandard2.0\MySqlConnector.dll">
       <PackagePath>MySqlConnector.dll</PackagePath>
@@ -126,31 +126,31 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\OpenDelivery.xr.xml">
       <PackagePath>OpenDelivery.xr.xml</PackagePath>
-      <Modified>2022-06-20T16:58:27.706</Modified>
+      <Modified>2022-06-22T06:01:04.198</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-06-21T16:13:25.354</Modified>
+      <Modified>2022-06-22T07:39:16.956</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\CustomerPage.xbf">
       <PackagePath>CustomerPage.xbf</PackagePath>
-      <Modified>2022-06-21T16:13:25.354</Modified>
+      <Modified>2022-06-22T07:39:16.956</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\InvoicePage.xbf">
       <PackagePath>InvoicePage.xbf</PackagePath>
-      <Modified>2022-06-21T16:13:25.355</Modified>
+      <Modified>2022-06-22T07:39:16.957</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-06-21T16:13:25.355</Modified>
+      <Modified>2022-06-22T07:39:16.957</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\MapPage.xbf">
       <PackagePath>MapPage.xbf</PackagePath>
-      <Modified>2022-06-21T16:13:25.355</Modified>
+      <Modified>2022-06-22T07:39:16.957</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\RoutePage.xbf">
       <PackagePath>RoutePage.xbf</PackagePath>
-      <Modified>2022-06-21T16:13:25.355</Modified>
+      <Modified>2022-06-22T07:39:16.957</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -162,7 +162,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\Core\OpenDelivery.exe">
       <PackagePath>OpenDelivery.exe</PackagePath>
-      <Modified>2022-06-21T16:13:27.205</Modified>
+      <Modified>2022-06-22T07:39:18.681</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

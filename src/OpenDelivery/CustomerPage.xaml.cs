@@ -17,14 +17,31 @@ using Windows.UI.Xaml.Navigation;
 
 namespace OpenDelivery
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class CustomerPage : Page
-    {
+    { 
         public CustomerPage()
         {
             this.InitializeComponent();
+        }
+
+        public void RefreshComboBox()
+        {
+            if (ComboBoxCustomerSelect.Items.Count != 0)
+            {
+                ComboBoxCustomerSelect.Items.Clear();
+            }
+            foreach(string str in Services.Database.customer)
+            {
+                ComboBoxCustomerSelect.Items.Add(str);
+                ComboBoxCustomerSelect.SelectedIndex = 0;
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Services.Database.refreshData();
+            RefreshComboBox();
+            
         }
     }
 }

@@ -55,12 +55,14 @@ namespace OpenDelivery
         {
             this.CurrentPageView.Children.Clear();
             this.CurrentPageView.Children.Add(routePage);
+            routePage.RefreshComboBox();
         }
 
         private void AppBarButtonKunden_Click(object sender, RoutedEventArgs e)
         {
             this.CurrentPageView.Children.Clear();
             this.CurrentPageView.Children.Add(customerPage);
+            customerPage.RefreshComboBox();
         }
 
         private void AppBarRechnung_Click(object sender, RoutedEventArgs e)

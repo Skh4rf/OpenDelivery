@@ -22,9 +22,30 @@ namespace OpenDelivery
     /// </summary>
     public sealed partial class RoutePage : Page
     {
+
         public RoutePage()
         {
             this.InitializeComponent();
+               
+        }
+
+        public void RefreshComboBox()
+        {
+            if (ComboBoxRouteSelect.Items.Count != 0)
+            {
+                ComboBoxRouteSelect.Items.Clear();
+            }
+            foreach (string str in Services.Database.routeNames)
+            {
+                ComboBoxRouteSelect.Items.Add(str);
+                ComboBoxRouteSelect.SelectedIndex = 0;
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Services.Database.refreshData();
+            RefreshComboBox();
         }
     }
 }
