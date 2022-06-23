@@ -8,10 +8,9 @@ namespace OpenDelivery.LocalData
 {
     internal class Route
     {
-        public int Route_ID { get; set; }
+        public int RoutenID { get; set; }
         public string Name { get; set; }
-        public List<Bestellung> Bestellungen { get; private set; }
 
-        public Route() { Bestellungen = new List<Bestellung>(); }
+        public Route() { }
     }
 }

@@ -121,6 +121,7 @@
     </Compile>
     <Compile Include="LocalData\Adresse.cs" />
     <Compile Include="LocalData\Bestellung.cs" />
+    <Compile Include="LocalData\Container.cs" />
     <Compile Include="LocalData\Koordinate.cs" />
     <Compile Include="LocalData\Kunde.cs" />
     <Compile Include="CustomerPage.xaml.cs">
