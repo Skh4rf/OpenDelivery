@@ -16,5 +16,15 @@ namespace OpenDelivery.LocalData
         public Koordinate koordinate;
 
         public Adresse() { }
+
+        public string getCityString()
+        {
+            return Postleitzahl.ToString();
+        }
+
+        public string getStreetString()
+        {
+            return Strasse + " " + Nummer + " " + Adresszusatz;
+        }
     }
 }

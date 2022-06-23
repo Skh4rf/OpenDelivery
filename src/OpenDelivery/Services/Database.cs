@@ -7,24 +7,21 @@ using MySqlConnector;
 
 namespace OpenDelivery.Services
 {
-    internal class Database
+    internal static class Database
     {
-        protected static MySqlConnection con_delivery = new MySqlConnection(@"server=localhost;userid=root;password=;database=opendelivery");
-
-        public static List<string> routeNames { get; set; } = new List<string>();
-        public static List<string> customer { get; set; } = new List<string>();
+        private static MySqlConnection con_delivery = new MySqlConnection(@"server=localhost;userid=root;password=;database=opendelivery");
 
         public static void refreshData()
         {
-            //routeNames.Clear();
-            //customer.Clear();
-            //getRoutes();
-            //getCustomerNames();
             getKoordinaten();
             getAdressen();
             getKunden();
             getRouten();
+            getProdukte();
+            getBestellungen();
         }
+
+        #region SQLgetData
 
         public static void getKoordinaten()
         {
@@ -70,7 +67,7 @@ namespace OpenDelivery.Services
                 try
                 {
                     adresse.Adresszusatz = reader.GetString(4);
-                }catch (Exception ex) { }
+                }catch (Exception) { adresse.Adresszusatz = null; }
                 adresse.koordinate = LocalData.Container.Koordinaten.Single(koordinate => koordinate.KoordinatenID == reader.GetInt32(5));
                 result.Add(adresse);
             }
@@ -124,6 +121,63 @@ namespace OpenDelivery.Services
             }
 
             LocalData.Container.Routen = result;
+            reader.Close();
+            con_delivery.Close();
         }
+
+        public static void getProdukte()
+        {
+            con_delivery.Open();
+            MySqlCommand cmd = new MySqlCommand($"SELECT * FROM Produkte", con_delivery);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            List<LocalData.Produkt> result = new List<LocalData.Produkt>();
+
+            LocalData.Produkt produkt;
+
+            while (reader.Read())
+            {
+                produkt = new LocalData.Produkt();
+                produkt.Artikelnummer = reader.GetInt32(0);
+                produkt.Name = reader.GetString(1);
+                produkt.Einheit = reader.GetString(2);
+                result.Add(produkt);
+            }
+
+            LocalData.Container.produkte = result;
+
+            con_delivery.Close();
+            reader.Close();
+        }
+
+        public static void getBestellungen()
+        {
+            con_delivery.Open();
+            MySqlCommand cmd = new MySqlCommand($"SELECT * FROM Bestellungen", con_delivery);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            List<LocalData.Bestellung> result = new List<LocalData.Bestellung>();
+
+            LocalData.Bestellung bestellung;
+
+            while (reader.Read())
+            {
+                bestellung = new LocalData.Bestellung();
+                bestellung.Bestellnummer = reader.GetInt32(0);
+                bestellung.kunde = LocalData.Container.Kunden.Single(kunde => kunde.Kundennummer == reader.GetInt32(1));
+                bestellung.route = LocalData.Container.Routen.Single(route => route.RoutenID == reader.GetInt32(2));
+                bestellung.Produkte = JSON.JsonToProduktList(reader.GetString(3));
+                result.Add(bestellung);
+            }
+
+            LocalData.Container.Bestellungen = result;
+
+            con_delivery.Close();
+            reader.Close();
+        }
+
+        #endregion SQLgetData
+
+
     }
 }

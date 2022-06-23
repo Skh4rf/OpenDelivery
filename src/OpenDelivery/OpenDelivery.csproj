@@ -146,6 +146,8 @@
     <Compile Include="Services\Geocoding.cs" />
     <Compile Include="Services\GPS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\JSON.cs" />
+    <Compile Include="Services\RouteListing.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -201,6 +203,9 @@
     </PackageReference>
     <PackageReference Include="MySqlConnector">
       <Version>2.1.10</Version>
+    </PackageReference>
+    <PackageReference Include="System.Text.Json">
+      <Version>6.0.5</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using OpenDelivery.LocalData;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -31,14 +32,17 @@ namespace OpenDelivery
 
         public void RefreshComboBox()
         {
-            if (ComboBoxRouteSelect.Items.Count != 0)
+            if (LocalData.Container.Routen != null)
             {
-                ComboBoxRouteSelect.Items.Clear();
-            }
-            foreach (string str in Services.Database.routeNames)
-            {
-                ComboBoxRouteSelect.Items.Add(str);
-                ComboBoxRouteSelect.SelectedIndex = 0;
+                if (ComboBoxRouteSelect.Items.Count != 0)
+                {
+                    ComboBoxRouteSelect.Items.Clear();
+                }
+                foreach (Route r in Container.Routen)
+                {
+                    ComboBoxRouteSelect.Items.Add(r.Name);
+                    ComboBoxRouteSelect.SelectedIndex = -1;
+                }
             }
         }
 
@@ -46,6 +50,15 @@ namespace OpenDelivery
         {
             Services.Database.refreshData();
             RefreshComboBox();
+        }
+
+        private void ComboBoxRouteSelect_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (ComboBoxRouteSelect.SelectedItem != null)
+            {
+                if (GridRouteListing.Children.Count > 0) { GridRouteListing.Children.Clear(); }
+                GridRouteListing.Children.Add(Services.RouteListing.getStackPanelForRoute(Container.Routen.Single(route => route.Name.Equals(ComboBoxRouteSelect.SelectedValue))));
+            }
         }
     }
 }

@@ -67,3 +67,8 @@ S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\MySqlC
 S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\System.Diagnostics.DiagnosticSource.dll
 S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\System.Runtime.CompilerServices.Unsafe.dll
 S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\obj\x86\Debug\FxResources.System.Diagnostics.DiagnosticSource.SR.resw
+S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\System.Text.Encodings.Web.dll
+S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\System.Text.Json.dll
+S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\obj\x86\Debug\FxResources.System.Text.Encodings.Web.SR.resw
+S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\obj\x86\Debug\FxResources.System.Text.Json.SR.resw

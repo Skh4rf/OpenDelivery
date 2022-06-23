@@ -11,7 +11,29 @@
     <Grid>
         <StackPanel Name="RouteSelect" Margin="50,50,0,0">
             <TextBlock Text="Wähle eine Route:" FontSize="36"/>
-            <ComboBox Name="ComboBoxRouteSelect" Width="250" Margin="0, 10, 0, 0" SelectedIndex="0"/>
+            <StackPanel Margin="0, 10, 0, 0" Orientation="Horizontal">
+                <ComboBox Name="ComboBoxRouteSelect" Width="250" SelectedIndex="-1" SelectionChanged="ComboBoxRouteSelect_SelectionChanged"/>
+                <Button Content="Hinzufügen" Margin="10, 0, 0, 0" VerticalAlignment="Top" Height="32"  FontSize="14" FontWeight="Normal" BorderBrush="ForestGreen" Background="LimeGreen"/>
+            </StackPanel>
+            <ScrollViewer Margin="0, 50, 0, 0" Width="1400" Height="790" HorizontalScrollMode="Enabled" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Grid Name="GridRouteListing" Margin="0, 0, 0, 0">
+                    <StackPanel Name="StackPanelRouteListing">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="1" FontSize="48" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                            <StackPanel Margin="40,0,0,0">
+                                <TextBlock Text="Test Name" FontSize="48" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+                                <TextBlock Text="6861 Albertest" FontSize="24" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+                                <TextBlock Text="Adresse 123" FontSize="24" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+                            </StackPanel>
+                            <StackPanel Margin="70,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                                <TextBlock Text="2x Produkt1" FontSize="24"/>
+                                <TextBlock Text="5kg Produkt2" FontSize="24"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <Line Stroke="White" X1="0" X2="1300" StrokeThickness="3" Margin="0,10,0,10" HorizontalAlignment="Left"/>
+                    </StackPanel>
+                </Grid>
+            </ScrollViewer>
         </StackPanel>
         <Button Content="Reload from Database" Margin="0,50,50,0" VerticalAlignment="Top" HorizontalAlignment="Right" Click="Button_Click"/>
     </Grid>

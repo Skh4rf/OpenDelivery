@@ -11,8 +11,12 @@
     <Grid>
         <StackPanel Name="RouteSelect" Margin="50,50,0,0">
             <TextBlock Text="Wähle einen Kunden:" FontSize="36"/>
-            <ComboBox Name="ComboBoxCustomerSelect" Width="250" Margin="0, 10, 0, 0" SelectedIndex="0"/>
+            <StackPanel Margin="0, 10, 0, 0" Orientation="Horizontal">
+                <ComboBox Name="ComboBoxCustomerSelect" Width="250" SelectedIndex="0"/>
+                <Button Content="+ Neuer Kunde erstellen" Margin="10, 0, 0, 0" VerticalAlignment="Top" Height="32"  FontSize="14" FontWeight="Normal" BorderBrush="ForestGreen" Background="LimeGreen"/>
+            </StackPanel>
         </StackPanel>
+        
         <Button Content="Reload from Database" Margin="0,50,50,0" VerticalAlignment="Top" HorizontalAlignment="Right" Click="Button_Click"/>
 
     </Grid>

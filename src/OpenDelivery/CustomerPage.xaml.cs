@@ -26,14 +26,17 @@ namespace OpenDelivery
 
         public void RefreshComboBox()
         {
-            if (ComboBoxCustomerSelect.Items.Count != 0)
+            if (LocalData.Container.Kunden != null)
             {
-                ComboBoxCustomerSelect.Items.Clear();
-            }
-            foreach(string str in Services.Database.customer)
-            {
-                ComboBoxCustomerSelect.Items.Add(str);
-                ComboBoxCustomerSelect.SelectedIndex = 0;
+                if (ComboBoxCustomerSelect.Items.Count != 0)
+                {
+                    ComboBoxCustomerSelect.Items.Clear();
+                }
+                foreach (LocalData.Kunde k in LocalData.Container.Kunden)
+                {
+                    ComboBoxCustomerSelect.Items.Add(k.getNameString());
+                    ComboBoxCustomerSelect.SelectedIndex = 0;
+                }
             }
         }
 
@@ -41,7 +44,6 @@ namespace OpenDelivery
         {
             Services.Database.refreshData();
             RefreshComboBox();
-            
         }
     }
 }

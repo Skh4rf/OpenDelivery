@@ -14,5 +14,10 @@ namespace OpenDelivery.LocalData
         public Adresse addresse;
 
         public Kunde() { }
+
+        public string getNameString()
+        {
+            return Vorname + " " + Nachname;
+        }
     }
 }

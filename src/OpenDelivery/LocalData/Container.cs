@@ -13,5 +13,6 @@ namespace OpenDelivery.LocalData
         public static List<Adresse> Adressen { get; set; }
         public static List<Kunde> Kunden { get; set; }
         public static List<Route> Routen { get; set; }
+        public static List<Produkt> produkte { get; set; }
     }
 }
