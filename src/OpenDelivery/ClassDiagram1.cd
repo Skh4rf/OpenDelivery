@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OpenDelivery.App" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAQAAIAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenDelivery.CustomerPage" BaseTypeListCollapsed="true">
+    <Position X="12.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAACAAAAACAgFAQEAgBAAAAAAAAQAAAAA=</HashCode>
+      <FileName>CustomerPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenDelivery.InvoicePage" BaseTypeListCollapsed="true">
+    <Position X="14.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InvoicePage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenDelivery.MainPage" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAABAABAgAAAAAAQAAAABAAAAAAAAAASAA=</HashCode>
+      <FileName>MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.268" Collapsed="true" />
+  </Class>
+  <Class Name="OpenDelivery.MapPage" BaseTypeListCollapsed="true">
+    <Position X="10.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAABAAIAAAAAAABAAAAAQASAABACAAAAAQAAAIEAA=</HashCode>
+      <FileName>MapPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenDelivery.RoutePage" BaseTypeListCollapsed="true">
+    <Position X="14.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAgEAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>RoutePage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenDelivery.LocalData.Adresse">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAABAACAAAAEAAACAAiAAAAACAAAAA=</HashCode>
+      <FileName>LocalData\Adresse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenDelivery.LocalData.BestelltesProdukt">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>LocalData\BestelltesProdukt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenDelivery.LocalData.Bestellung">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAABAAAAAIAAAAAAAAAAAAAE=</HashCode>
+      <FileName>LocalData\Bestellung.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenDelivery.LocalData.Container">
+    <Position X="5.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAIIAABAAAEABAAAAAAAAAAAQACAAgAAAAAA=</HashCode>
+      <FileName>LocalData\Container.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenDelivery.LocalData.Koordinate">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAIAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>LocalData\Koordinate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenDelivery.LocalData.Kunde">
+    <Position X="2.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAIAAAAAAAAAAAAAAAAAABABAAAAgAAAAA=</HashCode>
+      <FileName>LocalData\Kunde.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenDelivery.LocalData.Produkt">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAACAACAAAAAAAA=</HashCode>
+      <FileName>LocalData\Produkt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenDelivery.LocalData.Route">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LocalData\Route.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenDelivery.Services.Database">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQAAAAAAAAIAAAAAAABQAACAABAACAAABAAAAoAAAAA=</HashCode>
+      <FileName>Services\Database.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenDelivery.Services.Geocoding">
+    <Position X="12.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Geocoding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenDelivery.Services.GPS">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EABAAAAAAAABAAAAAEAAAAAAAAAAAgAAACAgEAAAAIA=</HashCode>
+      <FileName>Services\GPS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenDelivery.Services.JSON">
+    <Position X="12.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\JSON.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenDelivery.Services.RouteListing">
+    <Position X="12.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\RouteListing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

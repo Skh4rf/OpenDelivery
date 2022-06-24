@@ -2,7 +2,7 @@
 
 Zustell-Dispositionssystem:
 
-Ziel ist es ein Programm zu entwickeln welches so in einem Fahrzeug eines Zustelldienstes Platz finden könnte, um die Lieferanten bei der 
+Dies sollte ein Programm werden welches so in einem Fahrzeug eines Zustelldienstes Platz finden könnte, um die Lieferanten bei der 
 Lieferung zu unterstützen. Es sollen dabei für jede Route die Adresse, sowie die bestellten Produkte der nächsten Kunden angezeigt, bearbeitet
 oder hinzugefügt werden können. Ebenso sollen später zahlreiche Funktionen implementiert werden wie zum Beispiel eine automatische Rechnungserstellung
 zum Ende des Monats, oder für Abo bestellungen die Möglichkeit für den Kunden noch vor Antritt der Fahrt des Zustellers eine Änderung z.B. via 
