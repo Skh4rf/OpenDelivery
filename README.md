@@ -12,14 +12,14 @@ App vorzunehmen.
 
 ### Project Documentation
 
-- [Idea & Concept](./docs/project/Idea-and-Concept.md)
-- [Projectplanning](./docs/project/Projectplanning.md)
-- [Feature Overview](./docs/features/Index.md)
+- [Idea & Concept](./doc/project/Idea-and-Concept.md)
+- [Projectplanning](./doc/project/Projectplanning.md)
+- [Feature Overview](./doc/features/Index.md)
 
 ### Technical Documentation
 
-- [Technologie Stack](./docs/technical/technology-stack.md)
-- [Architecture](./docs/technical/Architecture.md)
+- [Technologie Stack](./doc/technical/technology-stack.md)
+- [Architecture](./doc/technical/Architecture.md)
 
 ## Contributors
 
