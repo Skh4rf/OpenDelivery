@@ -1,1 +1,1 @@
-![alt text] (./OpenDelivery_ClassDiagram.png)
+![alt text](OpenDelivery_ClassDiagram.png)
