@@ -83,6 +83,38 @@ namespace OpenDelivery
             await InitializeAsync(mapControl);
         }
 
+        private async void LoadRoute(double lat, double lon, MapRouteOptimization optimization = MapRouteOptimization.Time, MapRouteRestrictions restrictions = MapRouteRestrictions.None)
+        {
+            BasicGeoposition basicGeoposition = new BasicGeoposition();
+            basicGeoposition.Latitude = lat;
+            basicGeoposition.Longitude = lon;
+            Geopoint geopoint = new Geopoint(basicGeoposition);
+
+            await _gpsService.CalculateRouteAsync(geopoint, optimization, restrictions);
+
+            if (_gpsService.Route.Status == MapRouteFinderStatus.Success)
+            {
+                MapRouteView viewOfRoute = new MapRouteView(_gpsService.Route.Route);
+                viewOfRoute.RouteColor = Colors.DarkMagenta;
+                viewOfRoute.OutlineColor = Colors.DarkMagenta;
+
+                mapControl.Routes.Add(viewOfRoute);
+
+                await mapControl.TrySetViewBoundsAsync(
+                      _gpsService.Route.Route.BoundingBox,
+                      null,
+                      MapAnimationKind.Bow);
+                await mapControl.TrySetViewAsync(_gpsService.Route.Route.Legs[0].Maneuvers[0].StartingPoint, 20);
+
+                mapControl.Heading = _gpsService.Route.Route.Legs[0].Maneuvers[0].StartHeading;
+                await mapControl.TryTiltAsync(45);
+            }
+            else
+            {
+                throw new Exception("Could not calculate a route!");
+            }
+        }
+
         private async void LoadRoute(Geopoint destination, MapRouteOptimization optimization = MapRouteOptimization.Time, MapRouteRestrictions restrictions = MapRouteRestrictions.None)
         {
             await _gpsService.CalculateRouteAsync(destination, optimization, restrictions);
@@ -118,9 +150,11 @@ namespace OpenDelivery
             LoadRoute(new Geopoint(test));
         }
 
-        private void Page_GotFocus(object sender, RoutedEventArgs e)
+        public void RouteSelected()
         {
-
+            LocalData.Container.CurrentBestellungen = LocalData.Container.Bestellungen.Where(bestellung => bestellung.route.RoutenID == LocalData.Container.CurrentRoute.RoutenID).ToList();
+            LocalData.Koordinate koord = LocalData.Container.CurrentBestellungen[LocalData.Container.CurrentRoutePosition].kunde.adresse.koordinate;
+            LoadRoute(koord.Latitude, koord.Longitude);
         }
     }
 }

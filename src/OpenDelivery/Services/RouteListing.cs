@@ -41,13 +41,13 @@ namespace OpenDelivery.Services
                 customerName.HorizontalAlignment = HorizontalAlignment.Left;
 
                 TextBlock customerAdresse1 = new TextBlock();
-                customerAdresse1.Text = b.kunde.addresse.getCityString();
+                customerAdresse1.Text = b.kunde.adresse.getCityString();
                 customerAdresse1.FontSize = 24;
                 customerAdresse1.VerticalAlignment = VerticalAlignment.Bottom;
                 customerAdresse1.HorizontalAlignment = HorizontalAlignment.Left;
 
                 TextBlock customerAdresse2 = new TextBlock();
-                customerAdresse2.Text = b.kunde.addresse.getStreetString();
+                customerAdresse2.Text = b.kunde.adresse.getStreetString();
                 customerAdresse2.FontSize = 24;
                 customerAdresse2.VerticalAlignment = VerticalAlignment.Bottom;
                 customerAdresse2.HorizontalAlignment = HorizontalAlignment.Left;

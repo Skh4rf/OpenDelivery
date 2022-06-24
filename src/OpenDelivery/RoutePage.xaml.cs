@@ -60,5 +60,14 @@ namespace OpenDelivery
                 GridRouteListing.Children.Add(Services.RouteListing.getStackPanelForRoute(Container.Routen.Single(route => route.Name.Equals(ComboBoxRouteSelect.SelectedValue))));
             }
         }
+
+        private void LoadRoute_Click(object sender, RoutedEventArgs e)
+        {
+            if (ComboBoxRouteSelect.SelectedItem != null)
+            {
+                Container.CurrentRoute = Container.Routen.Single(route => route.Name.Equals(ComboBoxRouteSelect.SelectedValue));
+                Container.CurrentRoutePosition = 0;
+            }
+        }
     }
 }

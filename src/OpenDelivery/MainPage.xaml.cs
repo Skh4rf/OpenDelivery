@@ -49,6 +49,10 @@ namespace OpenDelivery
             }
             this.CurrentPageView.Children.Clear();
             this.CurrentPageView.Children.Add(mapPage);
+            if (LocalData.Container.CurrentRoute != null && LocalData.Container.CurrentRoutePosition == 0)
+            {
+                mapPage.RouteSelected();
+            }
         }
 
         private void AppBarButtonRouten_Click(object sender, RoutedEventArgs e)

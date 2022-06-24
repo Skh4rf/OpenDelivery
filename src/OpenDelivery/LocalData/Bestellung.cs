@@ -14,5 +14,12 @@ namespace OpenDelivery.LocalData
         public Route route;
 
         public Bestellung() { Produkte = new List<BestelltesProdukt>(); }
+
+        public Bestellung(List<BestelltesProdukt> produkte, Kunde k, Route r)
+        {
+            Produkte = produkte;
+            kunde = k;
+            route = r;
+        }
     }
 }

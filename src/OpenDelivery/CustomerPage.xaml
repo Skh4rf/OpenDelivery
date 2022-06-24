@@ -13,7 +13,7 @@
             <TextBlock Text="Wähle einen Kunden:" FontSize="36"/>
             <StackPanel Margin="0, 10, 0, 0" Orientation="Horizontal">
                 <ComboBox Name="ComboBoxCustomerSelect" Width="250" SelectedIndex="0"/>
-                <Button Content="+ Neuer Kunde erstellen" Margin="10, 0, 0, 0" VerticalAlignment="Top" Height="32"  FontSize="14" FontWeight="Normal" BorderBrush="ForestGreen" Background="LimeGreen"/>
+                <Button Name="ButtonCreateCustomer" Content="+ Neuer Kunde erstellen" Margin="10, 0, 0, 0" VerticalAlignment="Top" Height="32"  FontSize="14" FontWeight="Normal" BorderBrush="ForestGreen" Background="LimeGreen" Click="ButtonCreateCustomer_Click"/>
             </StackPanel>
         </StackPanel>
         

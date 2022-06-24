@@ -13,5 +13,7 @@ namespace OpenDelivery.LocalData
         public float Longitude { get; set; }
 
         public Koordinate() { }
+
+        public Koordinate(float latitude, float longitude) { Latitude = latitude; Longitude = longitude; }
     }
 }

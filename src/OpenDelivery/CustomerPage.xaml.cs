@@ -27,7 +27,7 @@ namespace OpenDelivery
         public void RefreshComboBox()
         {
             if (LocalData.Container.Kunden != null)
-            {
+            { 
                 if (ComboBoxCustomerSelect.Items.Count != 0)
                 {
                     ComboBoxCustomerSelect.Items.Clear();
@@ -35,7 +35,6 @@ namespace OpenDelivery
                 foreach (LocalData.Kunde k in LocalData.Container.Kunden)
                 {
                     ComboBoxCustomerSelect.Items.Add(k.getNameString());
-                    ComboBoxCustomerSelect.SelectedIndex = 0;
                 }
             }
         }
@@ -44,6 +43,23 @@ namespace OpenDelivery
         {
             Services.Database.refreshData();
             RefreshComboBox();
+        }
+
+        private void ButtonCreateCustomer_Click(object sender, RoutedEventArgs e)
+        {
+            Services.Database.refreshData();
+            RefreshComboBox();
+            /*LocalData.Koordinate koordinate = Services.Database.createTable(new LocalData.Koordinate(2, 2));
+            LocalData.Adresse adresse = Services.Database.createTable(new LocalData.Adresse(6850, "Dornbirn", "Stockach", 6, "", koordinate));
+            LocalData.Kunde kunde = Services.Database.createTable(new LocalData.Kunde("Jakob", "Metzler", adresse));
+            LocalData.Route route = Services.Database.createTable(new LocalData.Route("TestTour"));
+            LocalData.BestelltesProdukt produkt1 = new LocalData.BestelltesProdukt();
+            produkt1.Einheit = "Liter";
+            produkt1.Name = "Milch";
+            produkt1.Menge = 1;
+            List<LocalData.BestelltesProdukt> produkte = new List<LocalData.BestelltesProdukt>();
+            produkte.Add(produkt1);
+            LocalData.Bestellung bestellung = Services.Database.createTable(new LocalData.Bestellung(produkte, kunde, route));*/
         }
     }
 }

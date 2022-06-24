@@ -142,6 +142,7 @@
     <Compile Include="RoutePage.xaml.cs">
       <DependentUpon>RoutePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Services\CustomerInformations.cs" />
     <Compile Include="Services\Database.cs" />
     <Compile Include="Services\Geocoding.cs" />
     <Compile Include="Services\GPS.cs" />

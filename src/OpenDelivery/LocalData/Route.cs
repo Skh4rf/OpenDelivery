@@ -12,5 +12,7 @@ namespace OpenDelivery.LocalData
         public string Name { get; set; }
 
         public Route() { }
+
+        public Route(string name) { Name = name; }
     }
 }
