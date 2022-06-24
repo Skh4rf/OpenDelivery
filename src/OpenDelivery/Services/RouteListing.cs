@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using OpenDelivery.LocalData;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Shapes;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml;
 using Windows.UI;
-using OpenDelivery.LocalData;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Shapes;
 
 namespace OpenDelivery.Services
 {
@@ -57,7 +53,7 @@ namespace OpenDelivery.Services
                 itemsStackPanel.VerticalAlignment = VerticalAlignment.Bottom;
                 itemsStackPanel.HorizontalAlignment = HorizontalAlignment.Center;
 
-                foreach(BestelltesProdukt p in b.Produkte)
+                foreach (BestelltesProdukt p in b.Produkte)
                 {
                     TextBlock produkt = new TextBlock();
                     produkt.Text = p.Menge + " " + p.Einheit + " " + p.Name;

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OpenDelivery.LocalData
+﻿namespace OpenDelivery.LocalData
 {
     internal class Adresse
     {
@@ -18,7 +12,7 @@ namespace OpenDelivery.LocalData
 
         public Adresse() { }
 
-        public Adresse( int plz, string ort, string strasse, int nummer, string adresszusatz, Koordinate koord)
+        public Adresse(int plz, string ort, string strasse, int nummer, string adresszusatz, Koordinate koord)
         {
             Postleitzahl = plz;
             Ort = ort;

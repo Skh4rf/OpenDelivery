@@ -1,25 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using OpenDelivery.Services;
+using System;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI;
-using Windows.UI.Xaml.Navigation;
-using OpenDelivery.Services;
-using Windows.Devices.Geolocation;
-using Windows.UI.Xaml.Controls.Maps;
 using System.Threading.Tasks;
+using Windows.Devices.Geolocation;
 using Windows.Services.Maps;
+using Windows.UI;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Maps;
+using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace OpenDelivery
 {
@@ -43,6 +32,7 @@ namespace OpenDelivery
             ZoomLevel = DefaultZoomLevel;
         }
 
+        #region MapInitialization
         public async Task InitializeAsync(MapControl map)
         {
             if (_gpsService != null)
@@ -83,6 +73,9 @@ namespace OpenDelivery
             await InitializeAsync(mapControl);
         }
 
+        #endregion MapIntialization
+
+        #region LoadRoute
         private async void LoadRoute(double lat, double lon, MapRouteOptimization optimization = MapRouteOptimization.Time, MapRouteRestrictions restrictions = MapRouteRestrictions.None)
         {
             BasicGeoposition basicGeoposition = new BasicGeoposition();
@@ -141,20 +134,18 @@ namespace OpenDelivery
                 throw new Exception("Could not calculate a route!");
             }
         }
-
-        private void ButtonTest_Click(object sender, RoutedEventArgs e)
-        {
-            BasicGeoposition test = new BasicGeoposition();
-            test.Latitude = 47.443485;
-            test.Longitude = 9.735536;
-            LoadRoute(new Geopoint(test));
-        }
+        #endregion LoadRoute
 
         public void RouteSelected()
         {
             LocalData.Container.CurrentBestellungen = LocalData.Container.Bestellungen.Where(bestellung => bestellung.route.RoutenID == LocalData.Container.CurrentRoute.RoutenID).ToList();
             LocalData.Koordinate koord = LocalData.Container.CurrentBestellungen[LocalData.Container.CurrentRoutePosition].kunde.adresse.koordinate;
             LoadRoute(koord.Latitude, koord.Longitude);
+        }
+
+        public void RouteStopped()
+        {
+            mapControl.Routes.Clear();
         }
     }
 }

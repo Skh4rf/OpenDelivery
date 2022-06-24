@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Text.Json.Serialization;
 using System.Text.Json;
 
 namespace OpenDelivery.Services
@@ -12,13 +8,12 @@ namespace OpenDelivery.Services
     {
         public static string ProduktListToJson(List<LocalData.BestelltesProdukt> produkte)
         {
-            //return JsonSerializer.Serialize(produkte);
             string jsonstr = JsonSerializer.Serialize(produkte);
             List<char> jsonlist = jsonstr.ToCharArray().ToList();
 
             string newjsonstr = "\'";
 
-            foreach(char c in jsonlist)
+            foreach (char c in jsonlist)
             {
                 if (c.Equals('\"'))
                 {
@@ -34,5 +29,5 @@ namespace OpenDelivery.Services
         {
             return JsonSerializer.Deserialize<List<LocalData.BestelltesProdukt>>(jsonstr);
         }
-        }
+    }
 }

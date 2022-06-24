@@ -14,7 +14,6 @@
             x:Name="mapControl"
                                                        
             MapServiceToken="">
-            <Button x:ConnectionId='3' Name="ButtonTest" Content="Button" VerticalAlignment="Top"                         />
         </maps:MapControl>
     </Grid>
 </Page>

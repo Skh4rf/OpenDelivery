@@ -1,33 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using OpenDelivery.LocalData;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-using OpenDelivery.LocalData;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace OpenDelivery
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class RoutePage : Page
     {
 
         public RoutePage()
         {
             this.InitializeComponent();
-               
+
         }
 
         public void RefreshComboBox()
@@ -58,6 +45,11 @@ namespace OpenDelivery
             {
                 if (GridRouteListing.Children.Count > 0) { GridRouteListing.Children.Clear(); }
                 GridRouteListing.Children.Add(Services.RouteListing.getStackPanelForRoute(Container.Routen.Single(route => route.Name.Equals(ComboBoxRouteSelect.SelectedValue))));
+                LoadRoute.IsEnabled = true;
+            }
+            else
+            {
+                LoadRoute.IsEnabled = false;
             }
         }
 
@@ -65,8 +57,30 @@ namespace OpenDelivery
         {
             if (ComboBoxRouteSelect.SelectedItem != null)
             {
-                Container.CurrentRoute = Container.Routen.Single(route => route.Name.Equals(ComboBoxRouteSelect.SelectedValue));
-                Container.CurrentRoutePosition = 0;
+                if (LoadRoute.Content.Equals("Start"))
+                {
+                    Container.CurrentRoute = Container.Routen.Single(route => route.Name.Equals(ComboBoxRouteSelect.SelectedValue));
+                    Container.CurrentRoutePosition = 0;
+                    LoadRoute.Content = "Stop";
+                    LoadRoute.Background = new SolidColorBrush(Colors.Red);
+                    LoadRoute.BorderBrush = new SolidColorBrush(Colors.DarkRed);
+                    ComboBoxRouteSelect.IsEnabled = false;
+                    ButtonReloadDatabase.IsEnabled = false;
+                    ButtonCreateRoute.IsEnabled = false;
+                }
+                else
+                {
+                    Container.CurrentRoute = null;
+                    Container.CurrentRoutePosition = 0;
+                    Container.CurrentBestellungen = null;
+                    LoadRoute.Content = "Start";
+                    LoadRoute.Background = new SolidColorBrush(Colors.Orange);
+                    LoadRoute.BorderBrush = new SolidColorBrush(Colors.DarkOrange);
+                    ComboBoxRouteSelect.IsEnabled = true;
+                    ButtonReloadDatabase.IsEnabled = true;
+                    ButtonCreateRoute.IsEnabled = true;
+                }
+
             }
         }
     }

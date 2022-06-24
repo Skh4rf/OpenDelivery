@@ -1,24 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace OpenDelivery
 {
     public sealed partial class CustomerPage : Page
-    { 
+    {
+        private List<LocalData.Bestellung> _bestellungen;
+
         public CustomerPage()
         {
             this.InitializeComponent();
@@ -27,7 +19,7 @@ namespace OpenDelivery
         public void RefreshComboBox()
         {
             if (LocalData.Container.Kunden != null)
-            { 
+            {
                 if (ComboBoxCustomerSelect.Items.Count != 0)
                 {
                     ComboBoxCustomerSelect.Items.Clear();
@@ -37,6 +29,18 @@ namespace OpenDelivery
                     ComboBoxCustomerSelect.Items.Add(k.getNameString());
                 }
             }
+        }
+
+        public void DisableButtons()
+        {
+            ButtonLoadDatabase.IsEnabled = false;
+            ButtonCreateCustomer.IsEnabled = false;
+        }
+
+        public void EnableButtons()
+        {
+            ButtonLoadDatabase.IsEnabled = true;
+            ButtonCreateCustomer.IsEnabled = true;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -49,17 +53,65 @@ namespace OpenDelivery
         {
             Services.Database.refreshData();
             RefreshComboBox();
-            /*LocalData.Koordinate koordinate = Services.Database.createTable(new LocalData.Koordinate(2, 2));
-            LocalData.Adresse adresse = Services.Database.createTable(new LocalData.Adresse(6850, "Dornbirn", "Stockach", 6, "", koordinate));
-            LocalData.Kunde kunde = Services.Database.createTable(new LocalData.Kunde("Jakob", "Metzler", adresse));
-            LocalData.Route route = Services.Database.createTable(new LocalData.Route("TestTour"));
-            LocalData.BestelltesProdukt produkt1 = new LocalData.BestelltesProdukt();
-            produkt1.Einheit = "Liter";
-            produkt1.Name = "Milch";
-            produkt1.Menge = 1;
-            List<LocalData.BestelltesProdukt> produkte = new List<LocalData.BestelltesProdukt>();
-            produkte.Add(produkt1);
-            LocalData.Bestellung bestellung = Services.Database.createTable(new LocalData.Bestellung(produkte, kunde, route));*/
+        }
+
+        private void ComboBoxCustomerSelect_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBoxSelectRoute.Items.Clear();
+            GridShowCustomer.Visibility = Visibility.Collapsed;
+            if (ComboBoxCustomerSelect.SelectedItem != null)
+            {
+                GridShowCustomer.Visibility = Visibility.Visible;
+                LocalData.Kunde kunde = LocalData.Container.Kunden.Single(k => $"{k.Vorname} {k.Nachname}".Equals(ComboBoxCustomerSelect.SelectedItem.ToString()));
+                _bestellungen = LocalData.Container.Bestellungen.Where(bestellung => bestellung.kunde.Kundennummer == kunde.Kundennummer).ToList();
+
+
+                TextBlockVorname.Text = $"{kunde.Vorname} {kunde.Nachname}";
+                TextBlockStreet.Text = kunde.adresse.getStreetString();
+                TextBlockCity.Text = kunde.adresse.getCityString();
+
+                foreach (LocalData.Bestellung bestellung in _bestellungen)
+                {
+                    ComboBoxSelectRoute.Items.Add(bestellung.route.Name);
+                }
+            }
+        }
+
+        private void ComboBoxSelectRoute_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (ComboBoxSelectRoute.SelectedItem != null)
+            {
+                TextBlockProdukte.Text = "";
+                LocalData.Bestellung bestellung = _bestellungen.Single(b => b.route.Name.Equals(ComboBoxSelectRoute.SelectedItem.ToString()));
+                foreach (LocalData.BestelltesProdukt p in bestellung.Produkte)
+                {
+                    TextBlockProdukte.Text += $"- {p.Menge} {p.Einheit} {p.Name} {Environment.NewLine}";
+                }
+            }
+        }
+
+        private void ButtonEditName_Click(object sender, RoutedEventArgs e)
+        {
+            TextBoxChangeFirstName.Text = _bestellungen.First().kunde.Vorname;
+            TextBoxChangeLastName.Text = _bestellungen.First().kunde.Nachname;
+            ButtonEditAdresse.IsEnabled = ButtonEditName.IsEnabled = ButtonEditProdukte.IsEnabled = ButtonAddRoute.IsEnabled = ButtonDeleteRoute.IsEnabled = false;
+            GridEditName.Visibility = Visibility.Visible;
+        }
+
+        private void ButtonBack_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonEditAdresse.IsEnabled = ButtonEditName.IsEnabled = ButtonEditProdukte.IsEnabled = ButtonAddRoute.IsEnabled = ButtonDeleteRoute.IsEnabled = true;
+            GridEditName.Visibility = Visibility.Collapsed;
+        }
+
+        private void ButtonSave_Click(object sender, RoutedEventArgs e)
+        {
+            Services.Database.updateValue("Kunden", "Kundennummer", _bestellungen.First().kunde.Kundennummer.ToString(), "Vorname", $"\"{TextBoxChangeFirstName.Text}\"");
+            Services.Database.refreshData();
+            RefreshComboBox();
+            ButtonEditAdresse.IsEnabled = ButtonEditName.IsEnabled = ButtonEditProdukte.IsEnabled = ButtonAddRoute.IsEnabled = ButtonDeleteRoute.IsEnabled = true;
+            GridEditName.Visibility = Visibility.Collapsed;
+            GridShowCustomer.Visibility = Visibility.Collapsed;
         }
     }
 }

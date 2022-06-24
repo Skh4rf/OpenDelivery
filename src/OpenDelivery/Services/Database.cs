@@ -1,9 +1,7 @@
-﻿using System;
+﻿using MySqlConnector;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySqlConnector;
 
 namespace OpenDelivery.Services
 {
@@ -68,7 +66,8 @@ namespace OpenDelivery.Services
                 try
                 {
                     adresse.Adresszusatz = reader.GetString(5);
-                }catch (Exception) { adresse.Adresszusatz = null; }
+                }
+                catch (Exception) { adresse.Adresszusatz = null; }
                 adresse.koordinate = LocalData.Container.Koordinaten.Single(koordinate => koordinate.KoordinatenID == reader.GetInt32(6));
                 result.Add(adresse);
             }

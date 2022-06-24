@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OpenDelivery.LocalData
+﻿namespace OpenDelivery.LocalData
 {
     internal class Produkt
     {

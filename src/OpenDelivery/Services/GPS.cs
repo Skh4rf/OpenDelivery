@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using Windows.Devices.Geolocation;
 using Windows.ApplicationModel.Core;
+using Windows.Devices.Geolocation;
 using Windows.Services.Maps;
 
 namespace OpenDelivery.Services
 {
     public class GPS
     {
-        #region initialization
         private Geolocator _geolocator;
 
         public event EventHandler<Geoposition> OnPositionChanged;
@@ -20,15 +16,17 @@ namespace OpenDelivery.Services
 
         public MapRouteFinderResult Route { get; set; }
 
+
+        #region initialization
         //Aufbau eines Call-Tree zur Ermittlung der Position unter berücksichtigung verschiedener Parameter --> modularität
-        public Task<bool> InitializeAsync() { return InitializeAsync(50); } 
+        public Task<bool> InitializeAsync() { return InitializeAsync(50); }
 
         public Task<bool> InitializeAsync(uint accuracy)
         {
             return InitializeAsync(accuracy, (double)accuracy / 2);
         }
 
-        public async Task<bool> InitializeAsync (uint accuracy, double movementThreshold)
+        public async Task<bool> InitializeAsync(uint accuracy, double movementThreshold)
         {
             if (_geolocator != null)
             {
@@ -70,7 +68,7 @@ namespace OpenDelivery.Services
 
             CurrentPosition = await _geolocator.GetGeopositionAsync();
         }
-        
+
         public void StopListening() // Automatische Standortabfrage deaktivieren
         {
             if (_geolocator == null) { return; }

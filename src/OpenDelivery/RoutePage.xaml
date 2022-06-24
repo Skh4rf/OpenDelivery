@@ -14,12 +14,12 @@
             <StackPanel Margin="0, 10, 0, 0" Orientation="Horizontal">
                 <ComboBox Name="ComboBoxRouteSelect" Width="250" SelectedIndex="-1" SelectionChanged="ComboBoxRouteSelect_SelectionChanged"/>
                 <Button Name="ButtonCreateRoute" Content="+ Neue Route erstellen" Margin="10, 0, 0, 0" VerticalAlignment="Top" Height="32"  FontSize="14" FontWeight="Normal" BorderBrush="ForestGreen" Background="LimeGreen"/>
-                <Button Name="LoadRoute" Content="Starten" Margin="10,0,0,0" VerticalAlignment="Top" Height="32" FontSize="14" FontWeight="Normal" BorderBrush="DarkOrange" Background="Orange" Click="LoadRoute_Click"/>
+                <Button Name="LoadRoute" Content="Start" Margin="10,0,0,0" VerticalAlignment="Top" Height="32" FontSize="14" FontWeight="Normal" BorderBrush="DarkOrange" Background="Orange" Click="LoadRoute_Click" IsEnabled="False"/>
             </StackPanel>
             <ScrollViewer Margin="0, 50, 0, 0" Width="1400" Height="790" HorizontalScrollMode="Enabled" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <Grid Name="GridRouteListing" Margin="0, 0, 0, 0"/>
             </ScrollViewer>
         </StackPanel>
-        <Button Content="Reload from Database" Margin="0,50,50,0" VerticalAlignment="Top" HorizontalAlignment="Right" Click="Button_Click"/>
+        <Button Name="ButtonReloadDatabase" Content="Reload from Database" Margin="0,50,50,0" VerticalAlignment="Top" HorizontalAlignment="Right" Click="Button_Click"/>
     </Grid>
 </Page>
