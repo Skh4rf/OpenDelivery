@@ -6,6 +6,6 @@ Here are some of the most important features.
 
 - [Device Location](./Feature-One.md)
 - [Calculate Route](./Feature-Two.md)
-- [Feature Thre](./Feature-Three.md)
+- [Geocoding](./Feature-Three.md)
 - ...
 
