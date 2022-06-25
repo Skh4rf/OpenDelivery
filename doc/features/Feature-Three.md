@@ -1,4 +1,4 @@
-# Calculate Geocoding
+# Geocoding
 
 In order to provide a end-point for the route calculation, the address has to be convertet into a geoposition.
 
