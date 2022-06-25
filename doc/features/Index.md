@@ -7,7 +7,7 @@ Here are some of the most important features.
 - [Device Location](./Feature-One.md)
 - [Calculate Route](./Feature-Two.md)
 - [Geocoding](./Feature-Three.md)
-- [Database] (./Feature-Four.md)
+- [Database](./Feature-Four.md)
 
 ---
 
