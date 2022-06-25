@@ -1,0 +1,721 @@
+[
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         
+      ],
+      "createdAt":"21/06/2022",
+      "number":31,
+      "labels":"",
+      "state":"CLOSED",
+      "title":"Objekte zur lokalen Speicherung der Datenbank erstellen",
+      "body":"Objekt welche dazu dienen den aktuellen Status der Datenbank lokal abzuspeichern. Da keine große Datenmenge vorerst erwartet wird sollte es in Ordnung gehen die gesamte Datenbank damit abzubilden.",
+      "updatedAt":"25/06/2022",
+      "milestone":null,
+      "closedAt":"22/06/2022"
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         
+      ],
+      "createdAt":"30/05/2022",
+      "number":30,
+      "labels":"enhancement",
+      "state":"CLOSED",
+      "title":"xaml Route Window",
+      "body":"Window oder Grid zur Anzeige bzw. Auswahl der Route, Anzeigen der nächsten Routen-Haltepunkte.",
+      "updatedAt":"25/06/2022",
+      "milestone":null,
+      "closedAt":"24/06/2022"
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         {
+            "author":{
+               "login":"Skh4rf"
+            },
+            "body":"Done with [Adding Navigation Bar](https://github.com/Skh4rf/OpenDelivery/commit/b49377b6864eb811a2840d3219289f607665b10c) commit. Improvable ",
+            "createdAt":"20/06/2022"
+         }
+      ],
+      "createdAt":"30/05/2022",
+      "number":29,
+      "labels":"enhancement",
+      "state":"CLOSED",
+      "title":"xaml UI Window",
+      "body":"Window oder Grid für ein User-Interface um die Routen und Kunden zu bearbeiten oder z.B. Map-Einstellungen vorzunehmen.",
+      "updatedAt":"25/06/2022",
+      "milestone":null,
+      "closedAt":"20/06/2022"
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         {
+            "author":{
+               "login":"Skh4rf"
+            },
+            "body":"Completed with commit: [Adding first Map logics](https://github.com/Skh4rf/OpenDelivery/commit/d250ed8ae91b9d796ef89cf28feca3d8c3592dbb)",
+            "createdAt":"07/06/2022"
+         }
+      ],
+      "createdAt":"30/05/2022",
+      "number":28,
+      "labels":"enhancement",
+      "state":"CLOSED",
+      "title":"xaml Map Windows",
+      "body":"Window oder Grid für das Anzeigen der Map.",
+      "updatedAt":"25/06/2022",
+      "milestone":null,
+      "closedAt":"07/06/2022"
+   },
+   {
+      "assignees":[
+         {
+            "login":"Skh4rf"
+         }
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         {
+            "author":{
+               "login":"Skh4rf"
+            },
+            "body":"Completed with commit: Adding UWP project and turn icons",
+            "createdAt":"30/05/2022"
+         },
+         {
+            "author":{
+               "login":"Skh4rf"
+            },
+            "body":"[Icons](https://github.com/Skh4rf/OpenDelivery/tree/main/src/OpenDelivery/Icons)",
+            "createdAt":"25/06/2022"
+         }
+      ],
+      "createdAt":"25/05/2022",
+      "number":27,
+      "labels":"enhancement",
+      "state":"CLOSED",
+      "title":"Manöver Bilder erstellen",
+      "body":"Erstellen und hinzufügen der Bilder für die Anzeige des nächsten Routen-Manövers.",
+      "updatedAt":"25/06/2022",
+      "milestone":null,
+      "closedAt":"30/05/2022"
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         {
+            "author":{
+               "login":"Skh4rf"
+            },
+            "body":"Not essential",
+            "createdAt":"06/06/2022"
+         }
+      ],
+      "createdAt":"25/05/2022",
+      "number":26,
+      "labels":"enhancement",
+      "state":"CLOSED",
+      "title":"fx API Token laden",
+      "body":"Funktion um verschiedenste Initialisierungs-Parameter, hier vor allem die API-Token, von einem bestimmten Ort auf dem Gerät zu lesen und zu laden um einen versehentlichen Upload auf GitHub und Co. zu verhindern.",
+      "updatedAt":"06/06/2022",
+      "milestone":null,
+      "closedAt":"06/06/2022"
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         {
+            "author":{
+               "login":"Skh4rf"
+            },
+            "body":"SQL Logik erstellt. UI fehlt noch.",
+            "createdAt":"24/06/2022"
+         },
+         {
+            "author":{
+               "login":"Skh4rf"
+            },
+            "body":"UI für Kunden Name erstellt --> SQL-Funktionen funktionieren ---> restliche UIs fehlen noch",
+            "createdAt":"25/06/2022"
+         }
+      ],
+      "createdAt":"25/05/2022",
+      "number":25,
+      "labels":"enhancement",
+      "state":"OPEN",
+      "title":"fx's Kundendaten ändern",
+      "body":"PopUp Fenster um die Daten (Adresse, Telefonnummer, etc.) eines ausgewählten Kunden zu ändern.",
+      "updatedAt":"25/06/2022",
+      "milestone":null,
+      "closedAt":null
+   },
+   {
+      "assignees":[
+         {
+            "login":"Noah457"
+         }
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         
+      ],
+      "createdAt":"25/05/2022",
+      "number":24,
+      "labels":"enhancement",
+      "state":"OPEN",
+      "title":"fx Rechnung als PDF exportieren",
+      "body":"Erstellte Rechnung (wahrscheinlich HTML) in PDF exportieren und abspeichern.\nÜbergabeparameter: HTML string oder File location\nRückgabeparameter: void (abspeichern der Datei)",
+      "updatedAt":"03/06/2022",
+      "milestone":null,
+      "closedAt":null
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         
+      ],
+      "createdAt":"25/05/2022",
+      "number":23,
+      "labels":"enhancement",
+      "state":"OPEN",
+      "title":"fx Bestellübergabe prüfen",
+      "body":"Wenn dem Kunde die Ware zugestellt wurde, soll der Lieferant dies bestätigen und in einem weiteren Fenster mögliche Abweichungen (z.B. weniger/mehr oder gar keine Produkte zugestellt) auswählen/eintragen können.",
+      "updatedAt":"25/06/2022",
+      "milestone":null,
+      "closedAt":null
+   },
+   {
+      "assignees":[
+         {
+            "login":"Noah457"
+         }
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         
+      ],
+      "createdAt":"25/05/2022",
+      "number":22,
+      "labels":"enhancement",
+      "state":"OPEN",
+      "title":"fx Rechnung aus Lieferungen erstellen",
+      "body":"Lieferungen pro Kunde sollen an diese Funktion übergeben werden können, welche aus den Informationen eine Rechnung erzeugt und abspeichert.\r\n\r\nInput: Lieferungen pro Kunde\r\nOutput: PDF-Rechnung",
+      "updatedAt":"25/06/2022",
+      "milestone":null,
+      "closedAt":null
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         
+      ],
+      "createdAt":"25/05/2022",
+      "number":21,
+      "labels":"enhancement",
+      "state":"CLOSED",
+      "title":"fx Lieferungen pro Kunden laden",
+      "body":"Funktion welche die Lieferungen pro Kunde laden kann.\r\n\r\nInput: Kundenummer\r\nOutput: List<Lieferung>",
+      "updatedAt":"25/06/2022",
+      "milestone":null,
+      "closedAt":"24/06/2022"
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         
+      ],
+      "createdAt":"25/05/2022",
+      "number":20,
+      "labels":"enhancement",
+      "state":"OPEN",
+      "title":"fx Nächste Kunde in Route",
+      "body":"Button + Event welches den aktuellen Kunden in einer Route um eine Position weiter verschiebt.",
+      "updatedAt":"25/06/2022",
+      "milestone":null,
+      "closedAt":null
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         
+      ],
+      "createdAt":"25/05/2022",
+      "number":19,
+      "labels":"enhancement",
+      "state":"CLOSED",
+      "title":"fx Route wählen",
+      "body":"User-Interface welches es einem ermöglicht eine Route auszuwählen und diese zu starten.",
+      "updatedAt":"25/06/2022",
+      "milestone":null,
+      "closedAt":"24/06/2022"
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         
+      ],
+      "createdAt":"25/05/2022",
+      "number":18,
+      "labels":"enhancement",
+      "state":"CLOSED",
+      "title":"fx Bestellnummer pro Route laden",
+      "body":"Funktion welche die Bestellnummer für die jeweilige Route zurückgibt:\r\nÜbergabe: Route\r\nRückgabe: Bestellnummern-Liste",
+      "updatedAt":"25/06/2022",
+      "milestone":null,
+      "closedAt":"23/06/2022"
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         {
+            "author":{
+               "login":"Skh4rf"
+            },
+            "body":"Umstrukturiert: Gesamte Datenbank wird vorerst jeweils bei Aktualisierung gespeichert.",
+            "createdAt":"21/06/2022"
+         }
+      ],
+      "createdAt":"25/05/2022",
+      "number":17,
+      "labels":"enhancement",
+      "state":"CLOSED",
+      "title":"fx Lokale Kundenliste von Route erstellen",
+      "body":"",
+      "updatedAt":"21/06/2022",
+      "milestone":null,
+      "closedAt":"21/06/2022"
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         
+      ],
+      "createdAt":"25/05/2022",
+      "number":16,
+      "labels":"enhancement",
+      "state":"CLOSED",
+      "title":"fx Geolocation hinzufügen",
+      "body":"Funktion welche es ermöglicht neue lokale Koordinaten auf der Datenbank abzuspeichern.\r\n\r\nFunktion: SQL-Prozedur + Aufruf dieser mit den jeweiligen Parametern",
+      "updatedAt":"25/06/2022",
+      "milestone":null,
+      "closedAt":"24/06/2022"
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         
+      ],
+      "createdAt":"25/05/2022",
+      "number":15,
+      "labels":"enhancement",
+      "state":"CLOSED",
+      "title":"fx Route hinzufügen",
+      "body":"Funktion welche es ermöglicht neue lokale Routen auf der Datenbank abzuspeichern.\r\n\r\nFunktion: SQL-Prozedur + Aufruf dieser mit den jeweiligen Parametern",
+      "updatedAt":"25/06/2022",
+      "milestone":null,
+      "closedAt":"24/06/2022"
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         
+      ],
+      "createdAt":"25/05/2022",
+      "number":14,
+      "labels":"enhancement",
+      "state":"CLOSED",
+      "title":"fx Kunde hinzufügen",
+      "body":"Funktion welche es ermöglicht neue lokale Kunden auf der Datenbank abzuspeichern.\r\n\r\nFunktion: SQL-Prozedur + Aufruf dieser mit den jeweiligen Parametern",
+      "updatedAt":"25/06/2022",
+      "milestone":null,
+      "closedAt":"24/06/2022"
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         
+      ],
+      "createdAt":"25/05/2022",
+      "number":13,
+      "labels":"enhancement",
+      "state":"CLOSED",
+      "title":"Adresse von Kunden laden",
+      "body":"Funktion welche es ermöglicht die Adresse eines übergebenen Kunden zu laden.",
+      "updatedAt":"25/06/2022",
+      "milestone":null,
+      "closedAt":"23/06/2022"
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         
+      ],
+      "createdAt":"25/05/2022",
+      "number":12,
+      "labels":"enhancement",
+      "state":"CLOSED",
+      "title":"fx Produkte pro Kunde laden",
+      "body":"Funktion pro Kunde und pro Bestellung die Produkte zurückgibt.\r\n\r\nÜbergabe: Bestellung\r\nRückgabe: Produkt-Liste",
+      "updatedAt":"25/06/2022",
+      "milestone":null,
+      "closedAt":"24/06/2022"
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         
+      ],
+      "createdAt":"25/05/2022",
+      "number":11,
+      "labels":"enhancement",
+      "state":"CLOSED",
+      "title":"fx Kunden pro Bestellnummer laden",
+      "body":"Funktion welche den Kunden einer Bestellnummer zurückgibt.",
+      "updatedAt":"25/06/2022",
+      "milestone":null,
+      "closedAt":"23/06/2022"
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         {
+            "author":{
+               "login":"Skh4rf"
+            },
+            "body":"Completed with \"Adding SQL connection\"",
+            "createdAt":"22/06/2022"
+         }
+      ],
+      "createdAt":"25/05/2022",
+      "number":10,
+      "labels":"enhancement",
+      "state":"CLOSED",
+      "title":"fx Routen laden",
+      "body":"Alle auf der Datenbank vorhandenen Routen abrufen und zurückgeben.",
+      "updatedAt":"25/06/2022",
+      "milestone":null,
+      "closedAt":"22/06/2022"
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         
+      ],
+      "createdAt":"25/05/2022",
+      "number":9,
+      "labels":"enhancement",
+      "state":"CLOSED",
+      "title":"fx Adresse geocoden",
+      "body":"Funktion um mittels API eine Adresse (Straße, Nummer, Ort, Land) in geographische Koordinaten umzuwandeln.\nÜbergabeparameter: Adresse\nRückgabeparameter: Lat, Lon oder Geoposition ",
+      "updatedAt":"22/06/2022",
+      "milestone":null,
+      "closedAt":"22/06/2022"
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         
+      ],
+      "createdAt":"25/05/2022",
+      "number":8,
+      "labels":"enhancement",
+      "state":"CLOSED",
+      "title":"fx Endposition festlegen",
+      "body":"Funktion zum Festlegen einer Endposition für die gewünschte Route.\r\nÜbergabeparameter: -\r\nRückgabeparameter: Geoposition",
+      "updatedAt":"22/06/2022",
+      "milestone":null,
+      "closedAt":"22/06/2022"
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         
+      ],
+      "createdAt":"25/05/2022",
+      "number":7,
+      "labels":"enhancement",
+      "state":"CLOSED",
+      "title":"fx Startposition festlegen",
+      "body":"Funktion zum Ermitteln der aktuellen Startposition für das Planen einer Route.\r\nÜbergabeparameter: -\r\nRückgabeparameter: Geoposition",
+      "updatedAt":"21/06/2022",
+      "milestone":null,
+      "closedAt":"21/06/2022"
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         {
+            "author":{
+               "login":"Skh4rf"
+            },
+            "body":"Completed with commit: Adding first Map logics",
+            "createdAt":"07/06/2022"
+         }
+      ],
+      "createdAt":"25/05/2022",
+      "number":6,
+      "labels":"enhancement",
+      "state":"CLOSED",
+      "title":"fx Positionsänderung erkennen",
+      "body":"Funktion bzw. Interrupt-Service oder ähnliches (noch unklar), welche eine Positionsänderung der letzten gespeicherten Position (lokale Variable nötig falls kein ISR vorhanden oder möglich um Polling zu verwenden)\r\nÜbergabeparameter: \"Interrupt\"\r\nRückgabeparameter: void (ruft die Funktion zur aktuellen Positionserkennung auf)",
+      "updatedAt":"07/06/2022",
+      "milestone":null,
+      "closedAt":"07/06/2022"
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         
+      ],
+      "createdAt":"25/05/2022",
+      "number":5,
+      "labels":"enhancement",
+      "state":"OPEN",
+      "title":"fx Manöver anzeigen",
+      "body":"Funktion welche das nächste Manöver der Route auf der Karte anzeigt (Pfeil rechts oben).\r\nÜbergabeparameter: Manöver-Typ\r\nRückgabeparameter: Void",
+      "updatedAt":"31/05/2022",
+      "milestone":null,
+      "closedAt":null
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         {
+            "author":{
+               "login":"Skh4rf"
+            },
+            "body":"Completed with commit: [Adding route calculation](https://github.com/Skh4rf/OpenDelivery/commit/fdb5734bc8607ab7ce910f382c1fe13f1efbf6a1)",
+            "createdAt":"25/06/2022"
+         }
+      ],
+      "createdAt":"25/05/2022",
+      "number":4,
+      "labels":"enhancement",
+      "state":"CLOSED",
+      "title":"fx Route anzeigen",
+      "body":"Funktion welche eine übergebene Route auf die Map ladet. \r\nÜbergabeparameter: Route-Objekt\r\nRückgabeparameter: Void",
+      "updatedAt":"25/06/2022",
+      "milestone":null,
+      "closedAt":"22/06/2022"
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         {
+            "author":{
+               "login":"Skh4rf"
+            },
+            "body":"Completed with commit: [Adding first map logics](https://github.com/Skh4rf/OpenDelivery/commit/d250ed8ae91b9d796ef89cf28feca3d8c3592dbb)",
+            "createdAt":"08/06/2022"
+         },
+         {
+            "author":{
+               "login":"SahinU88"
+            },
+            "body":"Tipp: Ihr könnt auch den commit einfach verlinken, dass checkt github und verlinkt es automatisch. Siehe: https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls#commit-shas\r\n\r\nalternativ: ihr könnt auch direkt in commits ein issue closen https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue",
+            "createdAt":"22/06/2022"
+         }
+      ],
+      "createdAt":"25/05/2022",
+      "number":3,
+      "labels":"enhancement",
+      "state":"CLOSED",
+      "title":"fx Route berechnen",
+      "body":"Funktion zum Berechnen der Route mithilfe der API. \r\nÜbergabeparameter: Start & Ziel Position \r\nRückgabetyp: Route-Objekt",
+      "updatedAt":"25/06/2022",
+      "milestone":null,
+      "closedAt":"08/06/2022"
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         {
+            "author":{
+               "login":"Skh4rf"
+            },
+            "body":"Completed with commit: [Adding first map logics](https://github.com/Skh4rf/OpenDelivery/commit/d250ed8ae91b9d796ef89cf28feca3d8c3592dbb)",
+            "createdAt":"25/06/2022"
+         }
+      ],
+      "createdAt":"25/05/2022",
+      "number":2,
+      "labels":"enhancement",
+      "state":"CLOSED",
+      "title":"fx Position auslesen",
+      "body":"Funktion welche die Position des Geräts ausließt und zurückgibt. \r\nÜbergabeparameter: -\r\nRückgabeparameter: Geoposition",
+      "updatedAt":"25/06/2022",
+      "milestone":null,
+      "closedAt":"21/06/2022"
+   },
+   {
+      "assignees":[
+         
+      ],
+      "author":{
+         "login":"Skh4rf"
+      },
+      "comments":[
+         {
+            "author":{
+               "login":"Skh4rf"
+            },
+            "body":"Completed with commit: [Adding first map logics](https://github.com/Skh4rf/OpenDelivery/commit/d250ed8ae91b9d796ef89cf28feca3d8c3592dbb)",
+            "createdAt":"07/06/2022"
+         }
+      ],
+      "createdAt":"25/05/2022",
+      "number":1,
+      "labels":"enhancement",
+      "state":"CLOSED",
+      "title":"fx Karte inititalisieren",
+      "body":"Laden der Karte auf das vorbereitete Map Windows bzw. Grid",
+      "updatedAt":"25/06/2022",
+      "milestone":null,
+      "closedAt":"07/06/2022"
+   }
+]
