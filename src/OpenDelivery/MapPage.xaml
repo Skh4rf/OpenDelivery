@@ -15,5 +15,30 @@
             ZoomLevel="{x:Bind ZoomLevel, Mode=TwoWay}"
             MapServiceToken="">
         </maps:MapControl>
+        <Grid Name="GridCustomerInfo" Visibility="Collapsed">
+            <StackPanel Margin="30,150,0,0">
+                <Grid Name="GridCustomerInfo1">
+                    <Rectangle Fill="AliceBlue" Height="120" Width="400" RadiusX="20" RadiusY="20" Stroke="Blue" StrokeThickness="3" HorizontalAlignment="Left"/>
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Name="TextBlockCustomerInfo1_Name" Text="not available" FontSize="20" Foreground="Black" Margin="10, 0" FontWeight="Bold" VerticalAlignment="Bottom"/>
+                            <TextBlock Name="TextBlockCustomerInfo1_Adresse" Text="not available" FontSize="14" Foreground="Black" Margin="20,0" VerticalAlignment="Bottom"/>
+                        </StackPanel>
+                        <TextBlock Name="TextBlockCustomerInfo1_Products" Text="not available" Foreground="Black" FontSize="14" Margin="10,0"/>
+                    </StackPanel>
+                </Grid>
+                <Grid Name="GridCustomerInfo2" Visibility="Visible" Margin="0,10, 0, 0">
+                    <Rectangle Fill="AliceBlue" Height="120" Width="400" RadiusX="20" RadiusY="20" HorizontalAlignment="Left"/>
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Name="TextBlockCustomerInfo2_Name" Text="not available" FontSize="20" Foreground="Black" Margin="10, 0" FontWeight="Bold" VerticalAlignment="Bottom"/>
+                            <TextBlock Name="TextBlockCustomerInfo2_Adresse" Text="not available" FontSize="14" Foreground="Black" Margin="20,0" VerticalAlignment="Bottom"/>
+                        </StackPanel>
+                        <TextBlock Name="TextBlockCustomerInfo2_Products" Text="not available" Foreground="Black" FontSize="14" Margin="10,0"/>
+                    </StackPanel>
+                </Grid>
+                <Button Name="ButtonNextCustomer" Content="Next" Width="400" Height="50" Margin="0,20,0,0" Background="LimeGreen" BorderBrush="ForestGreen" BorderThickness="3"/>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Page>

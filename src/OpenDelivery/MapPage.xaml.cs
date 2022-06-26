@@ -140,7 +140,36 @@ namespace OpenDelivery
         {
             LocalData.Container.CurrentBestellungen = LocalData.Container.Bestellungen.Where(bestellung => bestellung.route.RoutenID == LocalData.Container.CurrentRoute.RoutenID).ToList();
             LocalData.Koordinate koord = LocalData.Container.CurrentBestellungen[LocalData.Container.CurrentRoutePosition].kunde.adresse.koordinate;
+
+            GridCustomerInfo.Visibility = Windows.UI.Xaml.Visibility.Visible;
+
+            LoadCustomerInfo1(LocalData.Container.CurrentBestellungen[0]);
+
+            if (LocalData.Container.CurrentBestellungen.Count > 1) { LoadCustomerInfo2(LocalData.Container.CurrentBestellungen[1]); }
+
             LoadRoute(koord.Latitude, koord.Longitude);
+        }
+
+        private void LoadCustomerInfo1(LocalData.Bestellung bestellung)
+        {
+            TextBlockCustomerInfo1_Name.Text = bestellung.kunde.getNameString();
+            TextBlockCustomerInfo1_Adresse.Text = bestellung.kunde.adresse.getFullString();
+            TextBlockCustomerInfo1_Products.Text = String.Empty;
+            foreach (LocalData.BestelltesProdukt p in bestellung.Produkte)
+            {
+                TextBlockCustomerInfo1_Products.Text += p.ToString() + Environment.NewLine;
+            }
+        }
+
+        private void LoadCustomerInfo2(LocalData.Bestellung bestellung)
+        {
+            TextBlockCustomerInfo2_Name.Text = bestellung.kunde.getNameString();
+            TextBlockCustomerInfo2_Adresse.Text = bestellung.kunde.adresse.getFullString();
+            TextBlockCustomerInfo2_Products.Text = String.Empty;
+            foreach (LocalData.BestelltesProdukt p in bestellung.Produkte)
+            {
+                TextBlockCustomerInfo2_Products.Text += p.ToString() + Environment.NewLine;
+            }
         }
 
         public void RouteStopped()

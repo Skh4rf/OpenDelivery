@@ -6,5 +6,9 @@
 
         public BestelltesProdukt() : base() { }
 
+        public override string ToString()
+        {
+            return $"{Menge} {Einheit} {Name}";
+        }
     }
 }

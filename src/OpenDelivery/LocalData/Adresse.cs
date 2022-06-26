@@ -31,5 +31,10 @@
         {
             return Strasse + " " + Nummer + " " + Adresszusatz;
         }
+
+        public string getFullString()
+        {
+            return $"{getStreetString()}, {getCityString()}";
+        }
     }
 }

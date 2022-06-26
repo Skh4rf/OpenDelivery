@@ -58,6 +58,7 @@ namespace OpenDelivery
         private void ComboBoxCustomerSelect_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ComboBoxSelectRoute.Items.Clear();
+            TextBlockProdukte.Text = String.Empty;
             GridShowCustomer.Visibility = Visibility.Collapsed;
             if (ComboBoxCustomerSelect.SelectedItem != null)
             {
@@ -92,8 +93,8 @@ namespace OpenDelivery
 
         private void ButtonEditName_Click(object sender, RoutedEventArgs e)
         {
-            TextBoxChangeFirstName.Text = _bestellungen.First().kunde.Vorname;
-            TextBoxChangeLastName.Text = _bestellungen.First().kunde.Nachname;
+            TextBoxChange1.Text = _bestellungen.First().kunde.Vorname;
+            TextBoxChange2.Text = _bestellungen.First().kunde.Nachname;
             ButtonEditAdresse.IsEnabled = ButtonEditName.IsEnabled = ButtonEditProdukte.IsEnabled = ButtonAddRoute.IsEnabled = ButtonDeleteRoute.IsEnabled = false;
             GridEditName.Visibility = Visibility.Visible;
         }
@@ -106,7 +107,8 @@ namespace OpenDelivery
 
         private void ButtonSave_Click(object sender, RoutedEventArgs e)
         {
-            Services.Database.updateValue("Kunden", "Kundennummer", _bestellungen.First().kunde.Kundennummer.ToString(), "Vorname", $"\"{TextBoxChangeFirstName.Text}\"");
+            Services.Database.updateValue("Kunden", "Kundennummer", _bestellungen.First().kunde.Kundennummer.ToString(), "Vorname", $"\"{TextBoxChange1.Text}\"");
+            Services.Database.updateValue("Kunden", "Kundennummer", _bestellungen.First().kunde.Kundennummer.ToString(), "Nachname", $"\"{TextBoxChange2.Text}\"");
             Services.Database.refreshData();
             RefreshComboBox();
             ButtonEditAdresse.IsEnabled = ButtonEditName.IsEnabled = ButtonEditProdukte.IsEnabled = ButtonAddRoute.IsEnabled = ButtonDeleteRoute.IsEnabled = true;
