@@ -30,13 +30,13 @@
     <AppXManifest Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-06-26T20:03:35.995</Modified>
+      <Modified>2022-06-27T20:19:26.416</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\OpenDelivery.exe">
       <PackagePath>entrypoint\OpenDelivery.exe</PackagePath>
-      <Modified>2022-06-26T20:03:35.058</Modified>
+      <Modified>2022-06-27T20:19:25.706</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jakob\.nuget\packages\microsoft.bcl.asyncinterfaces\6.0.0\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll">
       <PackagePath>Microsoft.Bcl.AsyncInterfaces.dll</PackagePath>
@@ -138,31 +138,31 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\OpenDelivery.xr.xml">
       <PackagePath>OpenDelivery.xr.xml</PackagePath>
-      <Modified>2022-06-26T20:03:34.935</Modified>
+      <Modified>2022-06-27T18:44:38.645</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-06-26T20:03:34.965</Modified>
+      <Modified>2022-06-27T20:19:25.596</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\CustomerPage.xbf">
       <PackagePath>CustomerPage.xbf</PackagePath>
-      <Modified>2022-06-26T20:03:34.965</Modified>
+      <Modified>2022-06-27T20:19:25.596</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\InvoicePage.xbf">
       <PackagePath>InvoicePage.xbf</PackagePath>
-      <Modified>2022-06-26T20:03:34.965</Modified>
+      <Modified>2022-06-27T20:19:25.596</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-06-26T20:03:34.965</Modified>
+      <Modified>2022-06-27T20:19:25.596</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\MapPage.xbf">
       <PackagePath>MapPage.xbf</PackagePath>
-      <Modified>2022-06-26T20:03:34.965</Modified>
+      <Modified>2022-06-27T20:19:25.595</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\RoutePage.xbf">
       <PackagePath>RoutePage.xbf</PackagePath>
-      <Modified>2022-06-26T20:03:34.965</Modified>
+      <Modified>2022-06-27T20:19:25.596</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -170,11 +170,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-06-25T00:54:12.426</Modified>
+      <Modified>2022-06-27T07:35:01.208</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\Schule\3chel\FSST\_project\OpenDelivery\src\OpenDelivery\bin\x86\Debug\Core\OpenDelivery.exe">
       <PackagePath>OpenDelivery.exe</PackagePath>
-      <Modified>2022-06-26T20:03:35.988</Modified>
+      <Modified>2022-06-27T20:19:26.411</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

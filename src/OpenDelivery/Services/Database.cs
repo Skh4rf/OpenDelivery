@@ -297,6 +297,16 @@ namespace OpenDelivery.Services
             LocalData.Container.Bestellungen.Add(bestellung);
             return bestellung;
         }
+
+        public static void createTable(LocalData.Kunde kunde, string jsonstringproducts)
+        {
+            con_delivery.Open();
+
+            MySqlCommand cmd = new MySqlCommand($"Call createGelieferteBestellung({kunde.Kundennummer}, {jsonstringproducts})", con_delivery);
+            cmd.ExecuteNonQuery();
+
+            con_delivery.Close();
+        }
         #endregion SQLcreateTable
 
         private static string toSQLString(string str)

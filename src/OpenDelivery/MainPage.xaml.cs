@@ -31,6 +31,9 @@ namespace OpenDelivery
             if (LocalData.Container.CurrentRoute != null && LocalData.Container.CurrentRoutePosition == 0)
             {
                 mapPage.RouteSelected();
+            }else if(LocalData.Container.CurrentRoute == null)
+            {
+                mapPage.RouteStopped();
             }
         }
 

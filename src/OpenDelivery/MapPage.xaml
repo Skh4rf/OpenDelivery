@@ -15,6 +15,7 @@
             ZoomLevel="{x:Bind ZoomLevel, Mode=TwoWay}"
             MapServiceToken="">
         </maps:MapControl>
+        
         <Grid Name="GridCustomerInfo" Visibility="Collapsed">
             <StackPanel Margin="30,150,0,0">
                 <Grid Name="GridCustomerInfo1">
@@ -37,7 +38,21 @@
                         <TextBlock Name="TextBlockCustomerInfo2_Products" Text="not available" Foreground="Black" FontSize="14" Margin="10,0"/>
                     </StackPanel>
                 </Grid>
-                <Button Name="ButtonNextCustomer" Content="Next" Width="400" Height="50" Margin="0,20,0,0" Background="LimeGreen" BorderBrush="ForestGreen" BorderThickness="3"/>
+                <Button CornerRadius="10" Name="ButtonNextCustomer" Content="Next" Width="400" Height="50" Margin="0,20,0,0" Background="LimeGreen" BorderBrush="ForestGreen" BorderThickness="3" Click="ButtonNextCustomer_Click"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Name="GridConfirm" Margin="600,150,0,0" VerticalAlignment="Top" Visibility="Collapsed">
+            <Rectangle Name="RectangleConfirm" Fill="Gray" Height="{Binding ActualHeight, ElementName=StackpanelConfirm, Mode=OneWay}" Width="600" RadiusX="20" RadiusY="20" HorizontalAlignment="Left"/>
+            <StackPanel Name="StackpanelConfirm" Margin="20,0,0,0" SizeChanged="StackpanelConfirm_SizeChanged">
+                <TextBlock Text="Produkte:" FontSize="48" TextDecorations="Underline"/>
+                <StackPanel Name="StackPanelConfirmProducts" Orientation="Horizontal" Margin="0,10,0,10">
+                    <TextBox Name="TextBoxConfirmQuantity"/>
+                    <TextBlock Name="TextBlockConfirmUnit" Text="Stück" FontSize="22" Margin="10,0,0,0"/>
+                    <ComboBox Name="ComboBoxConfirmItem" Margin="40,0,0,0" SelectionChanged="ComboBoxConfirmItem_SelectionChanged"/>
+                    <Button Name="ButtonSaveConfirmChang" CornerRadius="10" Content="Save" Margin="20,0,0,0" Background="LimeGreen" BorderBrush="ForestGreen" Click="ButtonSaveConfirmChang_Click"/>
+                </StackPanel>
+                <Button Name="ButtonConfirm" CornerRadius="10" Width="150" Height="50" Content="Confirm" FontSize="24" Margin="0,0,0,10" Background="LimeGreen" BorderBrush="ForestGreen" Click="ButtonConfirm_Click"/>
             </StackPanel>
         </Grid>
     </Grid>

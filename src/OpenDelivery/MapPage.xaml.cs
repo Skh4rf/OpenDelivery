@@ -150,6 +150,17 @@ namespace OpenDelivery
             LoadRoute(koord.Latitude, koord.Longitude);
         }
 
+        private void TryLoadCustomerInfos()
+        {
+            if (LocalData.Container.CurrentBestellungen.Count != LocalData.Container.CurrentRoutePosition + 1)
+            {
+                GridCustomerInfo2.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                LoadCustomerInfo2(LocalData.Container.CurrentBestellungen[LocalData.Container.CurrentRoutePosition + 1]);
+            }
+            else { GridCustomerInfo2.Visibility = Windows.UI.Xaml.Visibility.Collapsed; }
+            LoadCustomerInfo1(LocalData.Container.CurrentBestellungen[LocalData.Container.CurrentRoutePosition]);
+        }
+
         private void LoadCustomerInfo1(LocalData.Bestellung bestellung)
         {
             TextBlockCustomerInfo1_Name.Text = bestellung.kunde.getNameString();
@@ -172,9 +183,66 @@ namespace OpenDelivery
             }
         }
 
-        public void RouteStopped()
+        public async void RouteStopped()
         {
             mapControl.Routes.Clear();
+            await mapControl.TryTiltToAsync(0);
+        
+            mapControl.ZoomLevel = DefaultZoomLevel;
+            GridConfirm.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            GridCustomerInfo.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+        }
+
+        private void ButtonNextCustomer_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            GridConfirm.Visibility = Windows.UI.Xaml.Visibility.Visible;
+            LoadProductConfirm();
+        }
+
+        private void LoadProductConfirm()
+        {
+            GridConfirm.Visibility = Windows.UI.Xaml.Visibility.Visible;
+            ComboBoxConfirmItem.Items.Clear();
+            foreach (LocalData.BestelltesProdukt p in LocalData.Container.CurrentBestellungen[LocalData.Container.CurrentRoutePosition].Produkte)
+            {
+                ComboBoxConfirmItem.Items.Add(p.Name.ToString());
+            }
+        }
+
+        private void StackpanelConfirm_SizeChanged(object sender, Windows.UI.Xaml.SizeChangedEventArgs e)
+        {
+            RectangleConfirm.Height = StackpanelConfirm.ActualHeight;
+        }
+
+        private void ButtonConfirm_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            Database.createTable(LocalData.Container.CurrentBestellungen[LocalData.Container.CurrentRoutePosition].kunde, 
+                JSON.ProduktListToJson(LocalData.Container.CurrentBestellungen[LocalData.Container.CurrentRoutePosition].Produkte));
+            if (LocalData.Container.CurrentBestellungen.Count != LocalData.Container.CurrentRoutePosition + 1)
+            {
+                LocalData.Container.CurrentRoutePosition++;
+            }
+            GridConfirm.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            TryLoadCustomerInfos();
+        }
+
+        private void ComboBoxConfirmItem_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (ComboBoxConfirmItem.SelectedItem != null)
+            {
+                LocalData.BestelltesProdukt bestelltesProdukt = LocalData.Container.CurrentBestellungen[LocalData.Container.CurrentRoutePosition].Produkte.Single(
+                                produkt => produkt.Name.Equals(ComboBoxConfirmItem.SelectedItem.ToString()));
+                TextBlockConfirmUnit.Text = bestelltesProdukt.Einheit;
+                TextBoxConfirmQuantity.Text = bestelltesProdukt.Menge.ToString();
+            }
+        }
+
+        private void ButtonSaveConfirmChang_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            LocalData.Container.CurrentBestellungen[LocalData.Container.CurrentRoutePosition].Produkte[
+                LocalData.Container.CurrentBestellungen[LocalData.Container.CurrentRoutePosition].Produkte.FindIndex(
+                    produkt => produkt.Name.Equals(ComboBoxConfirmItem.SelectedItem.ToString()))].Menge =
+                    Convert.ToInt32(TextBoxConfirmQuantity.Text);
         }
     }
 }
