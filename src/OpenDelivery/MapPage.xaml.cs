@@ -224,6 +224,10 @@ namespace OpenDelivery
             }
             GridConfirm.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
             TryLoadCustomerInfos();
+
+            LocalData.Koordinate koord = LocalData.Container.CurrentBestellungen[LocalData.Container.CurrentRoutePosition].kunde.adresse.koordinate;
+            mapControl.Routes.Clear();
+            LoadRoute(koord.Latitude, koord.Longitude);
         }
 
         private void ComboBoxConfirmItem_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -239,10 +243,13 @@ namespace OpenDelivery
 
         private void ButtonSaveConfirmChang_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            LocalData.Container.CurrentBestellungen[LocalData.Container.CurrentRoutePosition].Produkte[
+            if (ComboBoxConfirmItem != null)
+            {
+                LocalData.Container.CurrentBestellungen[LocalData.Container.CurrentRoutePosition].Produkte[
                 LocalData.Container.CurrentBestellungen[LocalData.Container.CurrentRoutePosition].Produkte.FindIndex(
                     produkt => produkt.Name.Equals(ComboBoxConfirmItem.SelectedItem.ToString()))].Menge =
                     Convert.ToInt32(TextBoxConfirmQuantity.Text);
+            }
         }
     }
 }

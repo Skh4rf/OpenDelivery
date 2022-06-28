@@ -36,5 +36,10 @@
         {
             return $"{getStreetString()}, {getCityString()}";
         }
+
+        public string getFullStringWithoutAdditionalNumber()
+        {
+            return $"{Strasse} {Nummer}, {getCityString()}";
+        }
     }
 }

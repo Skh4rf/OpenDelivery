@@ -13,7 +13,7 @@
         <maps:MapControl x:ConnectionId='2'
             x:Name="mapControl"
                                                        
-            MapServiceToken="">
+            MapServiceToken="D8s8gIOeYTKefSMvxaqU~xYt6ER-OwvRqWWQ9hKx0pA~Agbmd5aWNzXGPa_FKPtwP5Xz_MepAB0HJD1TSg4FhDPrbl-OEeMjfYxbaA7uIjD-">
         </maps:MapControl>
         
         <Grid x:ConnectionId='3' Name="GridCustomerInfo" Visibility="Collapsed">

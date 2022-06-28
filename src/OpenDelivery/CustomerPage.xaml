@@ -16,50 +16,110 @@
                 <Button Name="ButtonCreateCustomer" Content="+ Neuer Kunde erstellen" Margin="10, 0, 0, 0" VerticalAlignment="Top" Height="32"  FontSize="14" FontWeight="Normal" BorderBrush="ForestGreen" Background="LimeGreen" Click="ButtonCreateCustomer_Click"/>
             </StackPanel>
 
-            <Grid Name="GridShowCustomer" Visibility="Collapsed">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="600"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <StackPanel Grid.Column="0">
-                <StackPanel Margin="0, 20, 0, 0" Orientation="Horizontal">
-                    <TextBlock Text="Name:" FontSize="36" VerticalAlignment="Stretch" FontWeight="Normal" TextDecorations="Underline"/>
-                    <Button Name="ButtonEditName" Content="Edit"  Margin="30,10,0,0" Click="ButtonEditName_Click"/>
-                </StackPanel>
-                <TextBlock Name="TextBlockVorname" Text="" FontSize="22" FontStyle="Italic" Margin="0,10,0,0"/>
-            
-                <StackPanel Margin="0, 20, 0, 0" Orientation="Horizontal">
-                    <TextBlock Text="Adresse:" FontSize="36" VerticalAlignment="Stretch" FontWeight="Normal" TextDecorations="Underline"/>
-                    <Button Name="ButtonEditAdresse" Content="Edit"  Margin="30,10,0,0"/>
-                </StackPanel>
-                <TextBlock Name="TextBlockStreet" Text="" FontSize="22" FontStyle="Italic" Margin="0,10,0,0"/>
-                <TextBlock Name="TextBlockCity" Text="" FontSize="22" FontStyle="Italic"/>
-
-                <TextBlock Text="Routen:" FontSize="36" VerticalAlignment="Stretch" FontWeight="Normal" TextDecorations="Underline" Margin="0, 20, 0, 0"/>
-                <StackPanel Margin="0, 10, 0, 0" Orientation="Horizontal">
-                    <ComboBox Name="ComboBoxSelectRoute" Width="200" Margin="0, 0, 0, 0" SelectionChanged="ComboBoxSelectRoute_SelectionChanged"/>
-                    <Button Name="ButtonAddRoute" Content="Hinzufügen" Margin="20, 0, 0, 0"/>
-                    <Button Name="ButtonDeleteRoute" Content="Entfernen"  Margin="10,0,0,0"/>
-                </StackPanel>
-
-                <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
-                    <TextBlock Name="TextBlockRoute" Text="Produkte:" FontSize="22" FontStyle="Italic" Margin="0,0,0,0"/>
-                    <Button Name="ButtonEditProdukte" Content="Edit" Margin="30, 0, 0, 0"/>
-                </StackPanel>
-                <TextBlock Name="TextBlockProdukte" Text="" FontSize="22" FontStyle="Italic"/>
-                </StackPanel>
-
-                <Grid Name="GridEditName" Grid.Column="1" Visibility="Collapsed">
-                    <StackPanel Margin="0, 20, 0 ,0">
-                        <TextBlock Text="Edit:" FontSize="22" FontStyle="Italic"/>
-                        <TextBox Name="TextBoxChange1" Width="200" Text="" HorizontalAlignment="Left" Margin="0, 10, 0, 0"/>
-                        <TextBox Name="TextBoxChange2" Width="200" Text="" HorizontalAlignment="Left" Margin="0, 10, 0, 0"/>
-                        <StackPanel Orientation="Horizontal" Margin="0, 10, 0, 0">
-                            <Button Name="ButtonSave" Content="Speichern" Click="ButtonSave_Click"/>
-                            <Button Name="ButtonBack" Content="Abbrechen" Margin="30, 0, 0, 0" Click="ButtonBack_Click"/>
+            <Grid>
+                <Grid Name="GridShowCustomer" Visibility="Collapsed">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="600"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <StackPanel Margin="0, 20, 0, 0" Orientation="Horizontal">
+                            <TextBlock Text="Name:" FontSize="36" VerticalAlignment="Stretch" FontWeight="Normal" TextDecorations="Underline"/>
+                            <Button Name="ButtonEditName" Content="Edit"  Margin="30,10,0,0" Click="ButtonEditName_Click"/>
                         </StackPanel>
+                        <TextBlock Name="TextBlockVorname" Text="" FontSize="22" FontStyle="Italic" Margin="0,10,0,0"/>
+
+                        <StackPanel Margin="0, 20, 0, 0" Orientation="Horizontal">
+                            <TextBlock Text="Adresse:" FontSize="36" VerticalAlignment="Stretch" FontWeight="Normal" TextDecorations="Underline"/>
+                            <Button Name="ButtonEditAdresse" Content="Edit"  Margin="30,10,0,0"/>
+                        </StackPanel>
+                        <TextBlock Name="TextBlockStreet" Text="" FontSize="22" FontStyle="Italic" Margin="0,10,0,0"/>
+                        <TextBlock Name="TextBlockCity" Text="" FontSize="22" FontStyle="Italic"/>
+
+                        <TextBlock Text="Routen:" FontSize="36" VerticalAlignment="Stretch" FontWeight="Normal" TextDecorations="Underline" Margin="0, 20, 0, 0"/>
+                        <StackPanel Margin="0, 10, 0, 0" Orientation="Horizontal">
+                            <ComboBox Name="ComboBoxSelectRoute" Width="200" Margin="0, 0, 0, 0" SelectionChanged="ComboBoxSelectRoute_SelectionChanged"/>
+                            <Button Name="ButtonAddRoute" Content="Hinzufügen" Margin="20, 0, 0, 0"/>
+                            <Button Name="ButtonDeleteRoute" Content="Entfernen"  Margin="10,0,0,0"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
+                            <TextBlock Name="TextBlockRoute" Text="Produkte:" FontSize="22" FontStyle="Italic" Margin="0,0,0,0"/>
+                            <Button Name="ButtonEditProdukte" Content="Edit" Margin="30, 0, 0, 0"/>
+                        </StackPanel>
+                        <TextBlock Name="TextBlockProdukte" Text="" FontSize="22" FontStyle="Italic"/>
                     </StackPanel>
+
+                    <Grid Name="GridEditName" Grid.Column="1" Visibility="Collapsed">
+                        <StackPanel Margin="0, 20, 0 ,0">
+                            <TextBlock Text="Edit:" FontSize="22" FontStyle="Italic"/>
+                            <TextBox Name="TextBoxChange1" Width="200" Text="" HorizontalAlignment="Left" Margin="0, 10, 0, 0"/>
+                            <TextBox Name="TextBoxChange2" Width="200" Text="" HorizontalAlignment="Left" Margin="0, 10, 0, 0"/>
+                            <StackPanel Orientation="Horizontal" Margin="0, 10, 0, 0">
+                                <Button Name="ButtonSave" Content="Speichern" Click="ButtonSave_Click"/>
+                                <Button Name="ButtonBack" Content="Abbrechen" Margin="30, 0, 0, 0" Click="ButtonBack_Click"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
                 </Grid>
+
+                <ScrollViewer Margin="0, 50, 0, 0" Width="1400" Height="790" HorizontalScrollMode="Enabled" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Grid Name="GridCreateNewCustomer" Visibility="Collapsed">
+                        <StackPanel>
+                            <TextBlock Text="Erstellen einen neuen Kunden:" FontSize="48"/>
+
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel>
+                                    <TextBlock Text="Vorname:" FontSize="24" Margin="0,20,0,0"/>
+                                    <TextBox Name="TextBoxCreateCustomerFirstName" Width="200" HorizontalAlignment="Left" TextChanged="TextBoxCreateCustomerFirstName_TextChanged"/>
+                                    <TextBlock Text="Nachname:" FontSize="24"/>
+                                    <TextBox Name="TextBoxCreateCustomerLastName" Width="200" HorizontalAlignment="Left" TextChanged="TextBoxCreateCustomerLastName_TextChanged"/>
+                                </StackPanel>
+
+                                <StackPanel Margin="50,0,0,0">
+                                    <TextBlock Text="Straße:" FontSize="24" Margin="0,20,0,0"/>
+                                    <TextBox Name="TextBoxCreateCustomerStreet" Width="200" HorizontalAlignment="Left" TextChanged="TextBoxCreateCustomerStreet_TextChanged"/>
+                                    <TextBlock Text="Nummer:" FontSize="24"/>
+                                    <TextBox Name="TextBoxCreateCustomerNumber" Width="200" HorizontalAlignment="Left" TextChanged="TextBoxCreateCustomerNumber_TextChanged"/>
+                                    <TextBlock Text="Adresszusatz:" FontSize="24"/>
+                                    <TextBox Name="TextBoxCreateCustomerNumber2" Width="200" HorizontalAlignment="Left" TextChanged="TextBoxCreateCustomerNumber2_TextChanged"/>
+                                    <TextBlock Text="Postleitzahl:" FontSize="24"/>
+                                    <TextBox Name="TextBoxCreateCustomerPostalcode" Width="200" HorizontalAlignment="Left" TextChanged="TextBoxCreateCustomerPostalcode_TextChanged"/>
+                                    <TextBlock Text="Ort:" FontSize="24"/>
+                                    <TextBox Name="TextBoxCreateCustomerCity" Width="200" HorizontalAlignment="Left" TextChanged="TextBoxCreateCustomerCity_TextChanged"/>
+                                </StackPanel>
+
+                                <StackPanel Margin="50,0,0,0">
+                                    <TextBlock Text="Zu Routen hinzufügen:" FontSize="24" Margin="0,20,0,0"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <ComboBox Name="ComboBoxCreateCustomerRoute" Width="200" SelectionChanged="ComboBoxCreateCustomerRoute_SelectionChanged"/>
+                                    </StackPanel>
+                                    
+                                    <TextBlock Text="Ausgewählte Routen:" FontSize="24"/>
+                                    <TextBlock Name="TextBlockCreateCustomerSelectedRoute" Text="" FontSize="18"/>
+                                    <Button Name="TextBlockCreateCustomerSave" Content="Save" FontSize="48" Width="200" Background="Orange" BorderBrush="DarkOrange" HorizontalAlignment="Center" Margin="0,50,0,0" Click="TextBlockCreateCustomerSave_Click"/>
+
+                                </StackPanel>
+
+                                <StackPanel Name="StackPanelCreateCustomerAddProducts" Margin="50,0,0,0" Visibility="Collapsed">
+                                    <TextBlock Text="Produkte wählen:" FontSize="24" Margin="0,20,0,0"/>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBox Name="TextBoxCreateCustomerProductQuantity" Width="70" TextChanged="TextBoxCreateCustomerProductQuantity_TextChanged"/>
+                                        <TextBlock Name="TextBlockCreateCustomerProductUnit" Text="Stück" FontSize="24" Margin="5,0,0,0"/>
+                                        <ComboBox Name="ComboBoxCreateCustomerProducts" Width="200" Margin="15,0,0,0" SelectionChanged="ComboBoxCreateCustomerProducts_SelectionChanged"/>
+                                        <Button Name="ButtonCreateCustomerAddProduct" Content="Add" Background="LimeGreen" BorderBrush="ForestGreen" Margin="15,0,0,0" IsEnabled="False" Click="ButtonCreateCustomerAddProduct_Click"/>
+                                    </StackPanel>
+
+                                    <TextBlock Text="Ausgewählte Produkte:" FontSize="24"/>
+                                    <TextBlock Name="TextBlockCreateCustomerShowSelectedProducts" Text="" FontSize="18"/>
+                                    <Button Name="ButtonCreateCustomerAddRoute" Content="Add Route" Background="LimeGreen" BorderBrush="ForestGreen" Click="ButtonCreateCustomerAddRoute_Click"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                </ScrollViewer>
+
             </Grid>
         </StackPanel> 
     <Button Name="ButtonLoadDatabase" Content="Reload from Database" Margin="0,50,50,0" VerticalAlignment="Top" HorizontalAlignment="Right" Click="Button_Click"/>

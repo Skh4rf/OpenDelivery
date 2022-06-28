@@ -79,6 +79,8 @@ namespace OpenDelivery.Services
 
                 RouteListing.Children.Add(customerStackPanel);
                 RouteListing.Children.Add(line);
+
+                count++;
             }
 
             return RouteListing;

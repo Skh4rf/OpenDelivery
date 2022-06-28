@@ -14,5 +14,7 @@ namespace OpenDelivery.LocalData
         public static Route CurrentRoute { get; set; }
         public static int CurrentRoutePosition { get; set; }
         public static List<Bestellung> CurrentBestellungen { get; set; }
+
+        public static LocalData.Koordinate geocodingdump { get; set; }
     }
 }
